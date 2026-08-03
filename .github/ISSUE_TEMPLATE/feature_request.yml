@@ -1,0 +1,55 @@
+name: Feature request
+description: Suggest one focused improvement for WizeFiles.
+title: "[Feature] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Explain the workflow problem first. A focused use case is more useful than a long list of unrelated features.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What are you trying to accomplish, and what makes it difficult today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Suggested solution
+      description: Describe the behavior and where it should appear in WizeFiles.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: How do you handle this workflow now?
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Main audience
+      options:
+        - Most users
+        - Cloud or NAS users
+        - Tablet, foldable, Chromebook, or desktop-mode users
+        - Root or Shizuku users
+        - Accessibility users
+        - Advanced/power users
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Add sanitized examples or mockups. Do not include private data or competitor APKs.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I searched existing issues and discussions for this request.
+          required: true
+        - label: This request contains no credentials, private paths, account information, or personal data.
+          required: true

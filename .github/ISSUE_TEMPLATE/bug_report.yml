@@ -1,0 +1,106 @@
+name: Bug report
+description: Report a reproducible problem in an official WizeFiles Beta build.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing WizeFiles. Search existing issues first and submit one defect per report.
+        **Never post credentials, tokens, private filenames, server addresses, personal documents, vault data, or unredacted logs.**
+  - type: input
+    id: version
+    attributes:
+      label: WizeFiles version and build
+      description: Find this in Settings → About.
+      placeholder: "Example: 1.4.0-beta.2 (1040002)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device
+      placeholder: "Manufacturer and exact model"
+    validations:
+      required: true
+  - type: input
+    id: android
+    attributes:
+      label: Android version
+      placeholder: "Example: Android 16"
+    validations:
+      required: true
+  - type: dropdown
+    id: storage
+    attributes:
+      label: Storage or feature area
+      options:
+        - Local/internal storage
+        - SAF folder
+        - SD card
+        - USB drive
+        - Network or cloud storage
+        - Tabs or dual-pane
+        - Search or indexing
+        - Transfer Center or synchronization
+        - Archive or vault
+        - Cleanup or disk analysis
+        - Root or Shizuku
+        - Settings or appearance
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Start from a known screen and use a numbered list.
+      placeholder: |
+        1. Open …
+        2. Select …
+        3. Tap …
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Reproducibility
+      options:
+        - Every time
+        - Most times
+        - Intermittent
+        - Happened once
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized diagnostics
+      description: Add screenshots, recordings, or logs only after removing private information.
+  - type: input
+    id: regression
+    attributes:
+      label: Last working version
+      description: Leave blank if unknown or if this never worked.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I tested an official APK from this repository's Releases page.
+          required: true
+        - label: I searched existing issues and known issues.
+          required: true
+        - label: I removed credentials, tokens, private paths, account details, server addresses, and personal data.
+          required: true
