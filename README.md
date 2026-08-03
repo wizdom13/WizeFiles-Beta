@@ -92,7 +92,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">Drag and drop between panes</td>
-      <td align="center"><strong>—</strong></td>
+      <td align="center"><strong>✓</strong></td>
       <td align="center">✓</td>
       <td align="center">✓</td>
       <td align="center">—</td>
@@ -161,7 +161,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">FTP / FTPS client</td>
-      <td align="center"><strong>✓ FTP</strong></td>
+      <td align="center"><strong>✓ FTP + FTPS</strong></td>
       <td align="center">✓</td>
       <td align="center">✓</td>
       <td align="center">—</td>
@@ -238,7 +238,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">Access phone from PC/browser</td>
-      <td align="center"><strong>— Planned</strong></td>
+      <td align="center"><strong>✓ Web</strong></td>
       <td align="center">✓ Web + FTP</td>
       <td align="center">✓ HTTP + FTP</td>
       <td align="center">—</td>
@@ -285,7 +285,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">Edit archive contents in place</td>
-      <td align="center"><strong>—</strong></td>
+      <td align="center"><strong>— Planned</strong></td>
       <td align="center">◐</td>
       <td align="center">✓ ZIP</td>
       <td align="center">—</td>
@@ -398,7 +398,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">Installed-app manager / APK backup</td>
-      <td align="center"><strong>—</strong></td>
+      <td align="center"><strong>— Planned</strong></td>
       <td align="center">◐ App collection</td>
       <td align="center">✓</td>
       <td align="center">◐ App sharing</td>
@@ -475,7 +475,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center"><strong>Feature coverage rating</strong></td>
-      <td align="center"><strong>8.4/10</strong></td>
+      <td align="center"><strong>9.2/10</strong></td>
       <td align="center">7.6/10</td>
       <td align="center">7.4/10</td>
       <td align="center">2.8/10</td>
