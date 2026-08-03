@@ -1,0 +1,38 @@
+title: "[Testing feedback] "
+body:
+  - type: input
+    id: version
+    attributes:
+      label: WizeFiles version and build
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+    validations:
+      required: true
+  - type: textarea
+    id: tested
+    attributes:
+      label: What did you test?
+      description: Describe the storage type and workflow without exposing private data.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Result and impressions
+    validations:
+      required: true
+  - type: textarea
+    id: suggestions
+    attributes:
+      label: Suggestions
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed credentials, tokens, private filenames, account details, server addresses, and personal data.
+          required: true

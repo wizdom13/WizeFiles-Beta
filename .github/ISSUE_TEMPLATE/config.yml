@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: General beta discussion
+    url: https://github.com/wizdom13/WizeFiles-Beta/discussions
+    about: Ask questions and share general feedback without filing a bug.
+  - name: Security vulnerability
+    url: https://github.com/wizdom13/WizeFiles-Beta/security
+    about: Do not report security vulnerabilities publicly. Use private vulnerability reporting.

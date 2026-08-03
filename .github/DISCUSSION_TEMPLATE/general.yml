@@ -1,0 +1,25 @@
+title: "[General] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this discussion for general WizeFiles Beta feedback and questions. For reproducible defects, use an issue form.
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic
+      description: What would you like to discuss?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include the beta version and device when relevant. Remove private information.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I removed credentials, tokens, private filenames, account details, server addresses, and personal data.
+          required: true

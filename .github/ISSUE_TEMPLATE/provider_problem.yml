@@ -1,0 +1,106 @@
+name: Storage or provider problem
+description: Report a problem with local, removable, network, or cloud storage.
+title: "[Provider] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use a test account where possible. **Do not upload credentials, tokens, cloud/rclone configuration files, server addresses, private filenames, or personal documents.**
+  - type: input
+    id: version
+    attributes:
+      label: WizeFiles version and build
+      placeholder: "Example: 1.4.0-beta.2 (1040002)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device and Android version
+      placeholder: "Example: Samsung SM-X…, Android 16"
+    validations:
+      required: true
+  - type: dropdown
+    id: provider_type
+    attributes:
+      label: Storage/provider type
+      options:
+        - Local/internal storage
+        - SAF folder
+        - SD card
+        - USB drive
+        - Google Drive
+        - Dropbox
+        - Box
+        - OneDrive
+        - Other rclone/cloud provider
+        - FTP or FTPS
+        - SFTP
+        - SMB
+        - WebDAV
+        - S3-compatible storage
+        - Other
+    validations:
+      required: true
+  - type: dropdown
+    id: operation
+    attributes:
+      label: Operation
+      options:
+        - Connect or authenticate
+        - Browse or list
+        - Open or preview
+        - Upload or copy to provider
+        - Download or copy from provider
+        - Move or rename
+        - Delete or recycle
+        - Search
+        - Synchronize
+        - Resume or retry
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: setup
+    attributes:
+      label: Sanitized setup details
+      description: Include connection method and relevant options, but no endpoint, username, account name, path, token, or secret.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open …
+        2. Connect …
+        3. Select …
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: network
+    attributes:
+      label: Network conditions
+      description: Wi-Fi/mobile, stable/intermittent, VPN yes/no. Do not post public IP addresses.
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Sanitized error or diagnostic information
+      description: Remove paths, hosts, account identifiers, request headers, cookies, and tokens.
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmation
+      options:
+        - label: I can reproduce this with an official WizeFiles Beta release.
+          required: true
+        - label: I searched existing issues and known issues.
+          required: true
+        - label: I removed all credentials, tokens, configuration files, endpoints, private paths, and personal data.
+          required: true
