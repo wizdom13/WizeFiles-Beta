@@ -9,7 +9,14 @@ Use this repository to download test builds, report bugs, and share feedback. **
 
 ## Download a beta build
 
-Download APKs only from this repository's [Releases](../../releases) page. Each release should include:
+Download APKs only from this repository's [Releases](../../releases) page.
+
+> [!NOTE]
+> The current release is **[WizeFiles v0.6.1 Beta](../../releases/tag/v0.6.1)** (Android build 601), published on 4 August 2026. Download `WizeFiles_v0.6.1_beta.apk` and its SHA-256 checksum from that release.
+>
+> Beta builds expire 30 days after compilation. Install a newer beta build to continue testing.
+
+Each release should include:
 
 - The APK and its version/build number
 - Release notes and the areas that need testing
@@ -28,6 +35,7 @@ WizeFiles is designed for local, removable, network, and cloud storage. Dependin
 - Copy, move, rename, delete, archive, and extraction workflows
 - Advanced batch rename and indexed search
 - Transfer Center, folder synchronization, and scheduled jobs
+- Direct WizeFiles-to-WizeFiles Nearby Transfer with one-time QR verification
 - Duplicate detection, storage cleanup, and visual disk analysis
 - Encrypted vault, biometric protection, root, and Shizuku features
 
@@ -35,7 +43,7 @@ Features under active development may not be present or complete in every beta r
 
 <h2 align="center">How WizeFiles compares</h2>
 
-The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, reviewed on 3 August 2026.
+The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, reviewed on 4 August 2026.
 
 **Legend:** ✓ Included · ◐ Partial, add-on, or narrower support · — Not publicly documented
 
@@ -249,7 +257,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">Direct nearby phone-to-phone transfer</td>
-      <td align="center"><strong>—</strong></td>
+      <td align="center"><strong>✓ QR-authenticated</strong></td>
       <td align="center">◐ Web share</td>
       <td align="center">✓ TCP receive</td>
       <td align="center">✓ Quick Share</td>
@@ -475,7 +483,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center"><strong>Feature coverage rating</strong></td>
-      <td align="center"><strong>9.2/10</strong></td>
+      <td align="center"><strong>9.5/10</strong></td>
       <td align="center">7.6/10</td>
       <td align="center">7.4/10</td>
       <td align="center">2.8/10</td>
