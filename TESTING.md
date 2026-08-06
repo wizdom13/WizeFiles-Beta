@@ -56,6 +56,16 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Folder synchronization and scheduled jobs
 - Conflict, overwrite, and delete confirmations
 
+### Archive modification
+
+- Add files, deep folder trees, and empty folders to unencrypted ZIP, 7z, and TAR.XZ archives.
+- Rename and delete individual entries and populated folders.
+- Exercise Replace, Keep both, Skip, and Cancel conflict choices.
+- Paste from local, SAF, SD card, USB, cloud, and network sources where available.
+- Pause, cancel, or terminate WizeFiles during reconstruction and confirm the original archive remains valid.
+- Test low-storage, remote-quota, disconnected-provider, corrupt-archive, Unicode-name, and case-collision conditions.
+- Confirm encrypted, split, nested, signed, and unsupported archive formats stay read-only.
+
 ### Analysis and security
 
 - Duplicate detection
