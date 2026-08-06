@@ -12,7 +12,7 @@ Use this repository to download test builds, report bugs, and share feedback. **
 Download APKs only from this repository's [Releases](../../releases) page.
 
 > [!NOTE]
-> The current release is **[WizeFiles v0.6.1 Beta](../../releases/tag/v0.6.1)** (Android build 601), published on 4 August 2026. Download `WizeFiles_v0.6.1_beta.apk` and its SHA-256 checksum from that release.
+> The current release is **[WizeFiles v0.6.2 Beta](../../releases/tag/v0.6.2)** (Android build 602), published on 6 August 2026. Download `WizeFiles_v0.6.2_beta.apk` and its SHA-256 checksum from that release.
 >
 > Beta builds expire 30 days after compilation. Install a newer beta build to continue testing.
 
@@ -32,7 +32,7 @@ WizeFiles is designed for local, removable, network, and cloud storage. Dependin
 - Local storage, SD cards, USB drives, and Android Storage Access Framework locations
 - FTP, SFTP, SMB, WebDAV, S3, and cloud accounts
 - Multiple tabs and adaptive dual-pane browsing
-- Copy, move, rename, delete, archive, and extraction workflows
+- Copy, move, rename, delete, archive, extraction, and transactional ZIP/7z/TAR.XZ editing workflows
 - Advanced batch rename and indexed search
 - Transfer Center, folder synchronization, and scheduled jobs
 - Direct WizeFiles-to-WizeFiles Nearby Transfer with one-time QR verification
@@ -43,7 +43,7 @@ Features under active development may not be present or complete in every beta r
 
 <h2 align="center">How WizeFiles compares</h2>
 
-The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, reviewed on 4 August 2026.
+The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, reviewed on 6 August 2026.
 
 **Legend:** ✓ Included · ◐ Partial, add-on, or narrower support · — Not publicly documented
 
@@ -293,7 +293,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">Edit archive contents in place</td>
-      <td align="center"><strong>— Planned</strong></td>
+      <td align="center"><strong>✓ ZIP/7z/TAR.XZ</strong></td>
       <td align="center">◐</td>
       <td align="center">✓ ZIP</td>
       <td align="center">—</td>
@@ -483,7 +483,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center"><strong>Feature coverage rating</strong></td>
-      <td align="center"><strong>9.5/10</strong></td>
+      <td align="center"><strong>9.8/10</strong></td>
       <td align="center">7.6/10</td>
       <td align="center">7.4/10</td>
       <td align="center">2.8/10</td>
