@@ -6,6 +6,46 @@ This file summarizes public WizeFiles Beta releases. Detailed notes, APKs, and S
 
 No unreleased changes are documented yet.
 
+## Version 0.6.2 — 2026-08-06
+
+### What changed
+
+- Added transactional editing for unencrypted ZIP, 7z, and TAR.XZ archives. Supported actions include paste, cut/paste, delete, rename, new folder, keyboard actions, and internal drag-and-drop.
+- Integrated archive modifications with Transfer Center and added conflict handling, validation, interruption recovery, and safe replacement of the original archive.
+- Fixed the blank bottom band introduced by the dual-pane browser wrapper by restoring the original inset-aware layout contract.
+- Added an always-visible Paste command to the file-list overflow menu when clipboard content can be pasted.
+- Added distinct Transfer Center, Sync & Backup, and Nearby Transfer icons and normalized enabled menu-icon tinting across light and dark themes.
+- Redesigned file-operation panels as compact floating pills with navigation-safe spacing, rounded edges, shared FAB-menu coloring, and left-edge animation.
+- Expanded and rounded FAB-menu labels so actions such as **Connect Cloud Drive** are shown in full.
+
+### Please test
+
+- In unencrypted ZIP, 7z, and TAR.XZ archives, add files and folders, create empty folders, rename and delete entries, and exercise Replace, Keep both, Skip, and Cancel conflicts.
+- Pause, cancel, or interrupt archive reconstruction and confirm that the original archive remains valid and recovery is available through Transfer Center.
+- Paste from local, SAF, SD card, USB, cloud, SMB, FTP/FTPS, SFTP, and WebDAV sources into supported archives where available.
+- Check single-pane and dual-pane browsing with gesture and three-button navigation; confirm there is no blank band above the operation panel and that Paste remains discoverable.
+- Verify operation-panel height, safe-area gap, left-edge animation, menu-icon tinting, and complete FAB labels in light, dark, and dynamic-color themes.
+
+### Known limitations
+
+- Archive editing is limited to unencrypted ZIP, 7z, and TAR.XZ files.
+- Encrypted, split, nested, signed, RAR, ISO, CAB, APK, AAB, JAR, DOCX, XLSX, PPTX, EPUB, and unknown archive formats remain read-only.
+- Symbolic links cannot be pasted into archives. Archive reconstruction may require substantial temporary space and time for large local or remote archives; the short final commit phase is non-cancellable.
+- Nearby Transfer still requires Google Play services, supports one sender and one receiver per session, and always copies rather than moves source files.
+- Beta builds expire 30 days after compilation.
+
+### Installation notes
+
+- Version 0.6.2 updates installed WizeFiles Beta 0.6.0 and 0.6.1 builds in place when they use the same beta signing key.
+- WizeFiles Beta uses a separate application ID from the future stable app, so their app data remains separate.
+- Back up important files and begin archive-editing tests with data you can recover.
+
+### Integrity
+
+- APK: `WizeFiles_v0.6.2_beta.apk`
+- SHA-256: published beside the APK on the release page
+- Release: [WizeFiles v0.6.2 Beta](../../releases/tag/v0.6.2)
+
 ## Version 0.6.1 — 2026-08-04
 
 ### What changed
@@ -64,8 +104,9 @@ No unreleased changes are documented yet.
 
 ### Known limitations
 
-- Direct nearby phone-to-phone transfer was not included in 0.6.0; update to 0.6.1 to test it.
-- Editing archive contents in place and the installed-app manager/APK backup remain planned features.
+- Direct nearby phone-to-phone transfer was not included in 0.6.0; update to 0.6.1 or later to test it.
+- Editing archive contents in place was not included in 0.6.0; update to 0.6.2 or later to test it.
+- The installed-app manager/APK backup remains a planned feature.
 - Beta builds expire 30 days after compilation.
 
 ### Installation notes
