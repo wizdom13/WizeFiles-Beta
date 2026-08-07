@@ -36,6 +36,7 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - FTP, SFTP, SMB, WebDAV, and S3
 - Cloud-account connection and reconnection
 - Upload, download, rename, delete, and remote-to-remote workflows
+- Normal-tap opening and **Open with** behavior for remote text and document files
 - Interrupted transfers and recovery
 - Slow, unstable, or metered networks
 
@@ -44,6 +45,9 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Multiple tabs
 - Single-pane and dual-pane switching
 - Independent pane navigation and selection
+- Bottom selection actions for one file, one folder, multiple files, and mixed file/folder selections
+- Back clearing selection before navigation and restoring pending Paste or picker panels
+- Browser **Tools** submenu availability, icon tinting, and disabled states
 - Search and index refresh
 - Batch rename preview and results
 - Keyboard, mouse, tablet, foldable, and desktop-mode behavior
@@ -65,6 +69,22 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Pause, cancel, or terminate WizeFiles during reconstruction and confirm the original archive remains valid.
 - Test low-storage, remote-quota, disconnected-provider, corrupt-archive, Unicode-name, and case-collision conditions.
 - Confirm encrypted, split, nested, signed, and unsupported archive formats stay read-only.
+
+### Appearance and content visuals
+
+- Switch among all 12 icon shapes and confirm **Squircle** is the default.
+- Verify shape previews remain clear in light, dark, black, and dynamic-color themes.
+- Check built-in file/folder icons, image/video thumbnails, and APK artwork in list and grid layouts.
+- Check the same shapes in Vault, Storage Cleaner, and file-operation conflict previews.
+- Change the setting while content is visible, then scroll rapidly and confirm recycled rows do not show stale shapes.
+- Verify video play badges and other overlays remain clear and are not clipped incorrectly.
+
+### External media handoff
+
+- Use **Open with** and **Edit with** for images and videos with compatible Android apps.
+- Confirm writable edits can be saved back when the external app supports the provided URI.
+- Verify media thumbnails and image/audio/video properties remain available after editor removal.
+- Test the no-compatible-app case and confirm WizeFiles reports it without crashing.
 
 ### Analysis and security
 
