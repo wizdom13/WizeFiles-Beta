@@ -6,6 +6,46 @@ This file summarizes public WizeFiles Beta releases. Detailed notes, APKs, and S
 
 No unreleased changes are documented yet.
 
+## Version 0.6.3 — 2026-08-07
+
+### What changed
+
+- Added 12 adaptive shapes for file and folder content visuals, with **Squircle** as the default. Built-in glyphs use theme-aware container colors, while image/video thumbnails and APK artwork follow the selected shape.
+- Added an **Icon shape** picker under Appearance with live previews for Squircle, Rounded square, Flower, Square, Teardrop, Pebble, Vessel, Pentagon, two Hexagon variants, Heptagon, and Octagon.
+- Moved selection commands into a rounded bottom action panel with four context-aware primary actions and a **More** menu. Single-item, multi-file, folder, and mixed selections now expose only valid actions.
+- Centralized item actions in selection mode, removed per-item three-dot buttons, applied Material selected-item colors, and made Back clear the active selection before navigating away.
+- Grouped Transfer Center, Sync & Backup, PC Access & Local Sharing, and Nearby Transfer under a new **Tools** submenu. Browser and selection-menu icons now use the theme primary color while unavailable actions remain visibly disabled.
+- Removed the built-in image and video editors. Media thumbnails, properties, **Open with**, and **Edit with** handoff to installed Android apps remain available.
+- Fixed normal-tap opening of remote files whose paths use WizeFiles-managed providers. Rclone and other custom remote paths are now resolved through the app's provider registry, addressing [issue #7](../../issues/7).
+
+### Please test
+
+- Change the icon shape repeatedly and verify list/grid rows, image/video thumbnails, APK artwork, Vault entries, Storage Cleaner results, and conflict previews update correctly in light, dark, black, and dynamic-color themes.
+- Test the selection panel with one file, one folder, multiple files, and mixed file/folder selections. Verify Rename, Batch rename, Select all, Share suppression for folders, **More**, and Back behavior in single-pane and dual-pane layouts.
+- Confirm Back clears selection before folder navigation and correctly restores any pending Paste or picker panel.
+- Open the **Tools** submenu and verify every available destination, icon tint, disabled state, and narrow-screen layout.
+- Open remote text files with a normal tap and with **Open with** across rclone/cloud, FTP/FTPS, SFTP, SMB, and WebDAV providers where available.
+- Open and edit images and videos through installed external apps, save changes back when supported, and confirm thumbnails and media properties still work.
+
+### Known limitations
+
+- Image and video editing requires a compatible external Android app.
+- Archive editing remains limited to unencrypted ZIP, 7z, and TAR.XZ files; unsupported, encrypted, split, nested, and signed formats remain read-only.
+- Nearby Transfer still requires Google Play services, supports one sender and one receiver per session, and always copies rather than moves source files.
+- Beta builds expire 30 days after compilation.
+
+### Installation notes
+
+- Version 0.6.3 updates installed WizeFiles Beta 0.6.0–0.6.2 builds in place when they use the same beta signing key.
+- WizeFiles Beta uses a separate application ID from the future stable app, so their app data remains separate.
+- If you reported or reproduced remote-file opening issue #7, retest the same file after updating and share the result on the issue.
+
+### Integrity
+
+- APK: `WizeFiles_v0.6.3_beta.apk`
+- SHA-256: published beside the APK on the release page
+- Release: [WizeFiles v0.6.3 Beta](../../releases/tag/v0.6.3)
+
 ## Version 0.6.2 — 2026-08-06
 
 ### What changed
