@@ -1,8 +1,18 @@
 # Known Issues
 
-No confirmed public defects are currently listed for the latest WizeFiles Beta release.
+One confirmed public defect affects the latest WizeFiles Beta release. A fix has been merged for the next beta but is not included in version 0.6.2.
 
 Release-specific testing risks and limitations are documented here and in the relevant [GitHub release](../../releases). Before reporting a problem, check this page and search [open issues](../../issues).
+
+## Confirmed defect in version 0.6.2
+
+### Normal tap can fail for some remote text files
+
+- **Affected:** Version 0.6.2 when opening some files whose paths use WizeFiles-managed remote providers, including rclone-backed connections.
+- **Severity:** Medium. The normal-tap open action can fail or crash, but the remote file is not modified.
+- **Workaround:** Select the file, use **Open with**, and choose the text editor explicitly.
+- **Status:** Fixed in [WizeFiles PR #93](https://github.com/wizdom13/WizeFiles/pull/93). The fix is awaiting the next beta and reporter validation.
+- **Tracking:** [Issue #7](../../issues/7).
 
 ## Version 0.6.2 limitations
 
