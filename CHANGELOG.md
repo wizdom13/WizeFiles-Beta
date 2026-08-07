@@ -4,7 +4,9 @@ This file summarizes public WizeFiles Beta releases. Detailed notes, APKs, and S
 
 ## Unreleased
 
-These changes have been merged into WizeFiles and are planned for the next beta. They are not included in version 0.6.2.
+No unreleased changes are documented yet.
+
+## Version 0.6.3 — 2026-08-07
 
 ### What changed
 
@@ -27,10 +29,22 @@ These changes have been merged into WizeFiles and are planned for the next beta.
 
 ### Known limitations
 
-- The next beta version, build number, APK name, release date, and checksum will be documented when the release is published.
-- Image and video editing now requires a compatible external Android app.
-- The archive-editing and Nearby Transfer limitations documented for version 0.6.2 remain applicable unless the next release notes state otherwise.
+- Image and video editing requires a compatible external Android app.
+- Archive editing remains limited to unencrypted ZIP, 7z, and TAR.XZ files; unsupported, encrypted, split, nested, and signed formats remain read-only.
+- Nearby Transfer still requires Google Play services, supports one sender and one receiver per session, and always copies rather than moves source files.
 - Beta builds expire 30 days after compilation.
+
+### Installation notes
+
+- Version 0.6.3 updates installed WizeFiles Beta 0.6.0–0.6.2 builds in place when they use the same beta signing key.
+- WizeFiles Beta uses a separate application ID from the future stable app, so their app data remains separate.
+- If you reported or reproduced remote-file opening issue #7, retest the same file after updating and share the result on the issue.
+
+### Integrity
+
+- APK: `WizeFiles_v0.6.3_beta.apk`
+- SHA-256: published beside the APK on the release page
+- Release: [WizeFiles v0.6.3 Beta](../../releases/tag/v0.6.3)
 
 ## Version 0.6.2 — 2026-08-06
 
