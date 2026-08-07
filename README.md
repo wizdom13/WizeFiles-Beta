@@ -12,7 +12,7 @@ Use this repository to download test builds, report bugs, and share feedback. **
 Download APKs only from this repository's [Releases](../../releases) page.
 
 > [!NOTE]
-> The current release is **[WizeFiles v0.6.2 Beta](../../releases/tag/v0.6.2)** (Android build 602), published on 6 August 2026. Download `WizeFiles_v0.6.2_beta.apk` and its SHA-256 checksum from that release.
+> The current release is **[WizeFiles v0.6.3 Beta](../../releases/tag/v0.6.3)** (Android build 603), published on 7 August 2026. Download `WizeFiles_v0.6.3_beta.apk` and its SHA-256 checksum from that release.
 >
 > Beta builds expire 30 days after compilation. Install a newer beta build to continue testing.
 
