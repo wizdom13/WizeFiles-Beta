@@ -6,6 +6,43 @@ This file summarizes public WizeFiles Beta releases. Detailed notes, APKs, and S
 
 No unreleased changes are documented yet.
 
+## Version 0.6.4 — 2026-08-12
+
+### What changed
+
+- Added App Manager with installed-package inventory, filters, search, package details, app opening, Android-confirmed uninstall, sharing, and provider-aware APK backup. Single-APK apps export as `.apk`; split packages export as checksum-described `.apks`.
+- Added focused built-in image and video previews, service-backed background audio playback, a read-only PDF reader, offline EPUB/MOBI-family e-book viewing, and a bounded saved-web-document viewer for HTML/XHTML, MHTML, CHM, and MAFF.
+- Added bounded preview support for ICO/CUR, TIFF/BTF, TGA-family, and camera-RAW sources, plus LibVLC fallback for specialist audio/video codecs that Media3 cannot decode.
+- Expanded read-only browsing across extensive archive, filesystem, and disk-image families, including RAR/RAR5, CAB, ISO/UDF, WIM, XAR, DMG, APFS, EXT, FAT, HFS/HFS+, NTFS, SquashFS, QCOW2, VDI, VHD/VHDX, VMDK, MBR/GPT, and split archive sets.
+- Added secure APK signing and verification for v1, v2, v3, and detached v4 signatures with provider-aware staging, key-store import/generation, Transfer Center recovery, and certificate reporting.
+- Added AAB upload-key signing and verification plus APKS, XAPK, and APKM package-container workflows with post-write validation and preservation of non-APK payloads.
+- Added the WizeFiles Pro entitlement foundation, signed offline license verification, Google Play Billing integration, app-styled purchase/restore UI, and enforced Free/Pro feature boundaries.
+- Beta remains time-limited Pro and never launches real checkout. Production purchase activation remains dependent on backend verification and a signed entitlement.
+- Hardened minified startup initialization and reflective component discovery. Missing production backend/public-key configuration now fails safely to Free.
+
+### Please test
+
+- App Manager inventory, filters, selection behavior, regular and split-package backups, sharing, cancellation, remote destinations, package info, and Android-confirmed uninstall.
+- Local, SAF, root, Vault, archive, network, and cloud sources in every built-in viewer; include corrupt, oversized, password-protected, disconnected, and unsupported samples.
+- Common and specialist audio/video formats, Media3-to-LibVLC fallback, background playback, notification controls, audio focus, Bluetooth, and headset unplug behavior.
+- Read-only archive and disk-image browsing, split-volume discovery, guarded extraction, traversal rejection, and expansion limits.
+- APK/AAB/APKS/XAPK/APKM signing and verification with imported and generated keys, wrong passwords, output conflicts, interruption recovery, tampering, and detached v4 sidecars.
+- About → WizeFiles Pro, active Beta entitlement state, and access to every gated advanced workflow. Confirm Beta never offers or launches Google Play checkout.
+
+
+### Installation notes
+
+- Version 0.6.4 uses the Beta application ID and updates earlier Beta builds in place when signed with the same key.
+- App Manager backups contain APK files only; application data, accounts, preferences, and private files are never included.
+- Package-signing passwords and private-key material must never be included in public issue reports.
+- Beta builds expire 30 days after compilation.
+
+### Integrity
+
+- APK: `WizeFiles_v0.6.4_beta.apk`
+- SHA-256: published beside the APK on the release page
+- Release: [WizeFiles v0.6.4 Beta](../../releases/tag/v0.6.4)
+
 ## Version 0.6.3 — 2026-08-07
 
 ### What changed
@@ -146,7 +183,7 @@ No unreleased changes are documented yet.
 
 - Direct nearby phone-to-phone transfer was not included in 0.6.0; update to 0.6.1 or later to test it.
 - Editing archive contents in place was not included in 0.6.0; update to 0.6.2 or later to test it.
-- The installed-app manager/APK backup remains a planned feature.
+- App Manager/APK backup was not included in 0.6.0; it was added after the 0.6.3 release.
 - Beta builds expire 30 days after compilation.
 
 ### Installation notes

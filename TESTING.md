@@ -23,6 +23,14 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 
 ## High-value areas
 
+### Launch, update, and Beta Pro state
+
+- Confirm a newly installed or updated minified Beta reaches the browser without a startup crash.
+- Open **About → WizeFiles Pro** and verify the valid Beta reports active Pro access.
+- Confirm Beta shows no prices, purchase offers, restore checkout, or route into Google Play Billing.
+- Exercise dual-pane, sync/schedules, package signing, archive mutation, batch App Manager actions, additional connections/vaults, rclone power-user setup, root, and local-server entry points while Beta Pro is active.
+- Verify existing files, vaults, connections, and Transfer Center history remain readable after restarts and configuration changes.
+
 ### Local and removable storage
 
 - Internal storage and app-accessible folders
@@ -69,6 +77,32 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Pause, cancel, or terminate WizeFiles during reconstruction and confirm the original archive remains valid.
 - Test low-storage, remote-quota, disconnected-provider, corrupt-archive, Unicode-name, and case-collision conditions.
 - Confirm encrypted, split, nested, signed, and unsupported archive formats stay read-only.
+
+### App Manager and APK backup
+
+- Verify All, User, System, and Disabled filters, search, sorting, selection clearing/preservation, and Select all on filtered results.
+- Verify Open, App Info, single uninstall, cancelled uninstall, and sequential multi-uninstall through Android's confirmation UI.
+- Back up and share a regular app as `.apk`; verify its filename and installability.
+- Back up a split app as `.apks`; inspect `base.apk`, all splits, `metadata.json`, and SHA-256 checksums.
+- Send backups to local, SAF, cloud, FTP/SFTP/SMB, and rclone destinations; verify Transfer Center progress, conflicts, cancellation, and no partial output.
+- Confirm backups never claim to include application data, accounts, preferences, or private files.
+
+### Built-in viewers and advanced formats
+
+- Test image/video previews, background audio, PDF, EPUB/Kindle-family books, HTML/XHTML, MHTML, CHM, and MAFF from local, SAF, root, Vault, archive, network, and cloud sources.
+- Test ICO/CUR, TIFF/BTF, TGA-family, and camera-RAW previews with valid, corrupt, oversized, truncated, and unsupported samples.
+- Verify common media stays on Media3 and specialist formats can fall back to LibVLC without loops; test notifications, lock screen, seek, audio focus, Bluetooth, and unplug-to-pause.
+- Browse representative RAR/RAR5, CAB, ISO/UDF, WIM, DMG, filesystem, virtual-disk, and split-volume containers; confirm they remain read-only and extraction uses normal safety limits.
+- Confirm DRM/encrypted Kindle content, outbound saved-web subresources, unsafe links, traversal paths, oversized expansion, and unsupported decoding fail safely with **Open with** available.
+
+### Android package signing and verification
+
+- Sign APKs with v1, v2, v3, and v2/v3 plus detached v4; verify every requested scheme and signer certificate afterward.
+- Import PKCS#12, JKS, and BKS keys and generate a password-protected PKCS#12 RSA key.
+- Test local, SAF, root, archive, network, cloud, and Vault sources/destinations, keep-both conflicts, cancellation, process interruption, and password re-entry recovery.
+- Test wrong passwords, missing aliases, malformed packages, tampered outputs, existing `.idsig` files, and attempts to overwrite the input.
+- Test AAB upload-key signing/verification and APKS/XAPK/APKM workflows; verify every contained APK shares the intended signer and non-APK payloads remain unchanged.
+- Never include private keys, keystores, passwords, certificates containing private identity data, or purchase tokens in a report.
 
 ### Appearance and content visuals
 

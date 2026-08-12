@@ -12,7 +12,7 @@ Use this repository to download test builds, report bugs, and share feedback. **
 Download APKs only from this repository's [Releases](../../releases) page.
 
 > [!NOTE]
-> The current release is **[WizeFiles v0.6.3 Beta](../../releases/tag/v0.6.3)** (Android build 603), published on 7 August 2026. Download `WizeFiles_v0.6.3_beta.apk` and its SHA-256 checksum from that release.
+> The current release is **[WizeFiles v0.6.4 Beta](../../releases/tag/v0.6.4)** (Android build 604), published on 12 August 2026. Download `WizeFiles_v0.6.4_beta.apk` and its SHA-256 checksum from that release.
 >
 > Beta builds expire 30 days after compilation. Install a newer beta build to continue testing.
 
@@ -29,23 +29,31 @@ Do not download WizeFiles Beta APKs from mirrors or third-party websites.
 
 WizeFiles is designed for local, removable, network, and cloud storage. Depending on the build and Android device, beta testing may cover:
 
-- Local storage, SD cards, USB drives, and Android Storage Access Framework locations
-- FTP, SFTP, SMB, WebDAV, S3, and cloud accounts
-- Multiple tabs and adaptive dual-pane browsing
-- Copy, move, rename, delete, archive, extraction, and transactional ZIP/7z/TAR.XZ editing workflows
-- Media-aware thumbnails and properties with **Open with** and **Edit with** handoff to installed Android apps
-- Adaptive file/folder icon shapes and theme-aware content visuals
-- Advanced batch rename and indexed search
-- Transfer Center, folder synchronization, and scheduled jobs
-- Direct WizeFiles-to-WizeFiles Nearby Transfer with one-time QR verification
-- Duplicate detection, storage cleanup, and visual disk analysis
-- Encrypted vault, biometric protection, root, and Shizuku features
+- Local storage, SD cards, USB drives, Android Storage Access Framework locations, root, and Shizuku
+- FTP/FTPS, SFTP, SMB, WebDAV, S3-compatible storage, and broad cloud-account support through rclone
+- Multiple tabs, adaptive dual-pane browsing, cross-pane drag-and-drop, mouse context menus, and desktop keyboard shortcuts
+- Conflict-aware copy, move, rename, delete, recycle bin, advanced batch rename, indexed search, and a persistent Transfer Center
+- Folder synchronization, scheduled backup, PC/browser access, local HTTP/FTP sharing, and QR-authenticated Nearby Transfer
+- Archive creation, extraction, and transactional ZIP/7z/TAR.XZ mutation plus read-only browsing of extensive archives, filesystems, and disk images
+- Built-in image/video previews, service-backed audio, read-only PDF and e-book readers, saved-web-document viewing, advanced image decoding, and LibVLC fallback for specialist media
+- Installed App Manager with single/split APK backup, package inspection, sharing, opening, and Android-confirmed uninstall
+- APK v1/v2/v3/v4 signing and verification, AAB upload-key signing, and APKS/XAPK/APKM package-container workflows
+- Duplicate detection, storage cleanup, visual disk analysis, encrypted vaults, biometric protection, checksums, and certificate details
+- Adaptive file/folder icon shapes, Material themes, foldable/tablet layouts, and Android TV support
 
-Features under active development may not be present or complete in every beta release. The release notes are authoritative for each build.
+Features under active development may not be present or complete in every beta release. The release notes and [Known Issues](KNOWN_ISSUES.md) are authoritative for each build.
+
+## Beta access and WizeFiles Pro
+
+Official Beta builds provide a time-limited **WizeFiles Pro** entitlement so testers can exercise advanced workflows without making a purchase. Beta and debug builds do not launch real Google Play checkout.
+
+The future production Free tier keeps core local and SAF file management, tabs, viewers, archive browsing and extraction, signature verification, Transfer Center history and recovery, one saved remote connection, one vault, and single-app App Manager actions. Pro covers advanced creation and execution such as dual-pane workflows, sync and schedules, package signing, archive mutation, batch App Manager operations, additional remote connections and vaults, rclone power-user setup, root access, and built-in local servers.
+
+Pro expiration never makes existing files, vault data, saved connections, or operation history inaccessible. Purchase activation in production will require a backend-verified, signed entitlement; a local purchase state alone cannot grant Pro.
 
 <h2 align="center">How WizeFiles compares</h2>
 
-The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, reviewed on 7 August 2026.
+The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, competitor references reviewed on 7 August 2026; WizeFiles implementation updated on 12 August 2026.
 
 **Legend:** ✓ Included · ◐ Partial, add-on, or narrower support · — Not publicly documented
 
@@ -396,7 +404,7 @@ The following comparison is based on features publicly documented by each develo
       <td align="center">—</td>
     </tr>
     <tr>
-      <td align="center">Checksums, APK, and permission details</td>
+      <td align="center">Checksums, package signing, and certificate details</td>
       <td align="center"><strong>✓</strong></td>
       <td align="center">◐</td>
       <td align="center">✓</td>
@@ -408,7 +416,7 @@ The following comparison is based on features publicly documented by each develo
     </tr>
     <tr>
       <td align="center">Installed-app manager / APK backup</td>
-      <td align="center"><strong>— Planned</strong></td>
+      <td align="center"><strong>✓ APK + split APKS</strong></td>
       <td align="center">◐ App collection</td>
       <td align="center">✓</td>
       <td align="center">◐ App sharing</td>
