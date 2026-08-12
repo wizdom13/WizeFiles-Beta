@@ -34,18 +34,24 @@ body:
     attributes:
       label: Storage or feature area
       options:
+        - App launch, update, or startup
         - Local/internal storage
         - SAF folder
         - SD card
         - USB drive
         - Network or cloud storage
-        - Tabs or dual-pane
-        - Search or indexing
-        - Transfer Center or synchronization
-        - Archive or vault
+        - Tabs, dual-pane, or drag-and-drop
+        - Search, indexing, or batch rename
+        - Transfer Center, sync, or scheduled backup
+        - Nearby Transfer or local HTTP/FTP sharing
+        - Archive, disk image, or vault
+        - Built-in viewer, image preview, or media playback
+        - App Manager or APK backup
+        - APK/AAB/APKS/XAPK/APKM signing or verification
+        - WizeFiles Pro or feature access
         - Cleanup or disk analysis
         - Root or Shizuku
-        - Settings or appearance
+        - Settings, appearance, or accessibility
         - Other
     validations:
       required: true
