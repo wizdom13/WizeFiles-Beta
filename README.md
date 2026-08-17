@@ -12,7 +12,7 @@ Use this repository to download test builds, report bugs, and share feedback. **
 Download APKs only from this repository's [Releases](../../releases) page.
 
 > [!NOTE]
-> The current release is **[WizeFiles v0.6.4 Beta](../../releases/tag/v0.6.4)** (Android build 604), published on 12 August 2026. Download `WizeFiles_v0.6.4_beta.apk` and its SHA-256 checksum from that release.
+> The current release is **[WizeFiles v0.6.5 Beta](../../releases/tag/v0.6.5)** (Android build 605), published on 17 August 2026. Download `WizeFiles_v0.6.5_beta.apk` and its SHA-256 checksum from that release.
 >
 > Beta builds expire 30 days after compilation. Install a newer beta build to continue testing.
 
@@ -24,6 +24,17 @@ Each release should include:
 - A SHA-256 checksum for integrity verification
 
 Do not download WizeFiles Beta APKs from mirrors or third-party websites.
+
+## What's new in version 0.6.5
+
+- Browser and Vault now share responsive List/Grid controls, adaptive grid density, manual column overrides, consistent selection behavior, and matching floating action menus.
+- Grid icons are capped for better use of phone, tablet, foldable, and desktop-width layouts, with recycled-icon refresh fixes for live density changes and scrolling.
+- Vault now has Browser-style view/sort access, localized item counts, corrected system-bar spacing, and consistent create dialogs.
+- App Manager protects system selections from uninstall and provides context-aware Enable or Disable actions.
+- Local crash reports are captured only on the device and are shared only when the tester explicitly chooses to send one.
+- Text-editor save handling, browser refresh behavior, system insets, translations, and the navigation drawer received stability and visual polish.
+
+See the [changelog](CHANGELOG.md#version-065--2026-08-17) for the full testing focus.
 
 ## What WizeFiles offers
 
@@ -53,7 +64,7 @@ Pro expiration never makes existing files, vault data, saved connections, or ope
 
 <h2 align="center">How WizeFiles compares</h2>
 
-The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, competitor references reviewed on 7 August 2026; WizeFiles implementation updated on 12 August 2026.
+The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, competitor references reviewed on 7 August 2026; WizeFiles implementation updated on 17 August 2026.
 
 **Legend:** ✓ Included · ◐ Partial, add-on, or narrower support · — Not publicly documented
 

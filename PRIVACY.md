@@ -21,6 +21,8 @@ Do not publish:
 
 WizeFiles maintainers may ask for the app version, Android version, device model, storage/provider type, reproduction steps, and sanitized diagnostics. Provide only the minimum information needed to reproduce the issue.
 
+Version 0.6.5 can capture crash reports locally on the device. WizeFiles does not automatically upload these reports. A report leaves the device only when the tester explicitly chooses to share it through an Android share target. Review and sanitize every report before sharing because it may contain filenames, paths, provider details, device information, or recent application state.
+
 Use placeholders such as `[ACCOUNT]`, `[SERVER]`, `[PRIVATE_PATH]`, `[SIGNING_KEY_REMOVED]`, and `[TOKEN_REMOVED]`. Signing and purchase reports should describe the key-store type, signature schemes, product type, and error state without attaching secrets, purchase evidence, or complete signed-license payloads. If a report cannot be safely sanitized, do not post it publicly.
 
 ## Security reports
