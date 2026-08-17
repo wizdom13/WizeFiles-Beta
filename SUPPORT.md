@@ -11,6 +11,8 @@ This repository supports public beta testing of WizeFiles.
 
 Search existing issues before creating a new one. Please keep each issue focused on one problem.
 
+When version 0.6.5 offers a local crash report, review and sanitize it before attaching it to a public issue. Sharing is optional and user-initiated; cancelling the Android share sheet keeps the report local.
+
 ## Not supported here
 
 - Security vulnerability details in public

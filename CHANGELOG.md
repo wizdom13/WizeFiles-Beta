@@ -6,6 +6,49 @@ This file summarizes public WizeFiles Beta releases. Detailed notes, APKs, and S
 
 No unreleased changes are documented yet.
 
+## Version 0.6.5 — 2026-08-17
+
+### What changed
+
+- Unified Browser and Vault view controls: both support List and Grid layouts, responsive automatic column counts, manual column overrides, consistent selection, and the same floating action menu order.
+- Refined adaptive grids for phones, tablets, foldables, and desktop-width windows by capping icon size and increasing useful density on larger displays.
+- Fixed stale, clipped, or square-looking recycled icons after changing the grid count, switching icon shapes, or scrolling.
+- Updated Vault with a Browser-style view/sort toolbar action, localized folder/file counts, corrected system-bar insets, a single-row Import Files/Lock Vault control, and consistent create dialogs.
+- Updated the universal and Vault floating action menus to offer New File, New Folder, New Secure Folder, then Connect Cloud Drive.
+- Updated App Manager selection actions: Uninstall is disabled when a system app is included, Enable/Disable reflects the selected apps' state, and the redundant Select all action was removed.
+- Matched Browser New File and New Folder dialogs to Vault, including rounded surfaces, balanced field margins, and consistent keyboard/inset handling.
+- Added user-controlled local crash reports. WizeFiles does not automatically upload them; the tester chooses whether and how to share sanitized diagnostics.
+- Improved text-editor save readiness and unsaved-change tracking, browser list refreshes, location icons, Paste visibility, Settings/system insets, translations, and other visual details.
+- Added a branded edge-to-edge navigation drawer header while retaining readable storage and navigation actions.
+
+### Please test
+
+- Switch Browser and Vault repeatedly between List, Auto Grid, and manual grid counts; rotate or resize the window, scroll quickly, change icon shape/theme, and confirm icons remain rounded, correctly sized, and attached to the right item.
+- Verify Auto Grid uses sensible density on compact phones, large phones, tablets, foldables, landscape, and desktop-width windows; verify a manual count remains in effect until Auto is selected again.
+- Select files and folders in Browser and Vault grid/list layouts and verify highlighting, action availability, back behavior, item counts, view/sort controls, and the floating action menu order.
+- In App Manager, select user, system, enabled, disabled, and mixed app sets. Confirm system selections cannot be uninstalled and Enable/Disable is shown only when the selection has an unambiguous applicable state.
+- Create files, normal folders, and secure folders from both Browser and Vault; check field margins, rounded dialogs, keyboard insets, validation, cancellation, and persistence.
+- Trigger and inspect a local crash report using a non-sensitive test scenario, then confirm nothing is uploaded until the user explicitly shares it.
+- Edit text, leave with and without saving, navigate rapidly, and exercise Settings/About/navigation drawer flows across light, dark, dynamic-color, and large-screen configurations.
+
+### Known limitations
+
+See [Known Issues](KNOWN_ISSUES.md#version-065-limitations) for deliberate beta boundaries and current reporting guidance.
+
+### Installation notes
+
+- Version 0.6.5 uses the Beta application ID and updates earlier Beta builds in place when signed with the same key.
+- Local crash reports can contain filenames, paths, or device details. Review and sanitize them before sharing publicly.
+- App Manager backups contain APK files only; application data, accounts, preferences, and private files are never included.
+- Beta builds expire 30 days after compilation.
+
+### Integrity
+
+- APK: `WizeFiles_v0.6.5_beta.apk`
+- SHA-256: `b927e4cd89c0b4b3b8e05f0aad8ff43003c332799fae5e6e4647bba41d4b3bf6`
+- Release: [WizeFiles v0.6.5 Beta](../../releases/tag/v0.6.5)
+
+
 ## Version 0.6.4 — 2026-08-12
 
 ### What changed

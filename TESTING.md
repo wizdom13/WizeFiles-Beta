@@ -53,9 +53,11 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Multiple tabs
 - Single-pane and dual-pane switching
 - Independent pane navigation and selection
-- Bottom selection actions for one file, one folder, multiple files, and mixed file/folder selections
+- Bottom selection actions for one file, one folder, multiple files, and mixed file/folder selections in both List and Grid layouts
 - Back clearing selection before navigation and restoring pending Paste or picker panels
-- Browser **Tools** submenu availability, icon tinting, and disabled states
+- Browser and Vault view/sort toolbar actions, localized item-count subtitles, icon tinting, and disabled states
+- Browser and Vault floating action menus in this order: New File, New Folder, New Secure Folder, Connect Cloud Drive
+- New File/New Folder dialogs: rounded shape, balanced field margins, validation, focus, keyboard insets, and cancellation
 - Search and index refresh
 - Batch rename preview and results
 - Keyboard, mouse, tablet, foldable, and desktop-mode behavior
@@ -80,8 +82,10 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 
 ### App Manager and APK backup
 
-- Verify All, User, System, and Disabled filters, search, sorting, selection clearing/preservation, and Select all on filtered results.
+- Verify All, User, System, and Disabled filters, search, sorting, and selection clearing/preservation.
 - Verify Open, App Info, single uninstall, cancelled uninstall, and sequential multi-uninstall through Android's confirmation UI.
+- Select a system app or a mixed selection containing one and confirm Uninstall is disabled.
+- Select enabled apps, disabled apps, and mixed-state apps; confirm the context-aware Enable/Disable action and disabled state are correct.
 - Back up and share a regular app as `.apk`; verify its filename and installability.
 - Back up a split app as `.apks`; inspect `base.apk`, all splits, `metadata.json`, and SHA-256 checksums.
 - Send backups to local, SAF, cloud, FTP/SFTP/SMB, and rclone destinations; verify Transfer Center progress, conflicts, cancellation, and no partial output.
@@ -108,9 +112,11 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 
 - Switch among all 12 icon shapes and confirm **Squircle** is the default.
 - Verify shape previews remain clear in light, dark, black, and dynamic-color themes.
-- Check built-in file/folder icons, image/video thumbnails, and APK artwork in list and grid layouts.
-- Check the same shapes in Vault, Storage Cleaner, and file-operation conflict previews.
-- Change the setting while content is visible, then scroll rapidly and confirm recycled rows do not show stale shapes.
+- Check built-in file/folder icons, image/video thumbnails, and APK artwork in List, Auto Grid, and manual grid-count layouts.
+- Check the same shapes and responsive grid behavior in Browser, Vault, Storage Cleaner, and file-operation conflict previews.
+- Change grid count and icon shape while content is visible, then scroll rapidly and confirm recycled cells do not show stale, clipped, or square backgrounds.
+- Rotate, resize, enter split-screen, and change fold state where available; confirm Auto Grid recalculates from usable width while manual counts remain selected.
+- On large phones and tablets, confirm icons are capped at a readable size and the grid uses the available space without excessive gaps.
 - Verify video play badges and other overlays remain clear and are not clipped incorrectly.
 
 ### External media handoff
@@ -119,6 +125,13 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Confirm writable edits can be saved back when the external app supports the provided URI.
 - Verify media thumbnails and image/audio/video properties remain available after editor removal.
 - Test the no-compatible-app case and confirm WizeFiles reports it without crashing.
+
+### Local crash reports
+
+- Confirm a captured report remains on the device until the user chooses a share target.
+- Review the report before sharing and verify it can be cancelled without transmission.
+- Sanitize filenames, paths, account/provider details, device identifiers, signing material, purchase data, and other private content.
+- Confirm the app can reopen normally after the report is handled or dismissed.
 
 ### Analysis and security
 
