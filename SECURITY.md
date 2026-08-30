@@ -30,6 +30,6 @@ A report will be reviewed, reproduced where possible, prioritized by impact and 
 
 ## Scope
 
-Examples of in-scope concerns include unauthorized file access, credential exposure, vault or biometric bypass, insecure remote-provider handling, unsafe update installation, and permission-boundary violations.
+Examples of in-scope concerns include unauthorized file access, credential exposure, vault or biometric bypass, insecure remote-provider handling, package or signer-verification bypass, split-identity confusion, XAPK OBB path traversal, unsafe update installation, secure-shred scope bypass, and permission-boundary violations.
 
 General crashes, feature failures, and non-security data-loss bugs belong in the public issue forms after sensitive information has been removed.

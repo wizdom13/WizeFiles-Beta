@@ -4,7 +4,7 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 
 ## Safety first
 
-- Back up important files before testing copy, move, rename, delete, archive, extraction, synchronization, or vault features.
+- Back up important files before testing copy, move, rename, delete, archive, extraction, synchronization, package installation, secure shred, or vault features.
 - Start with disposable test data.
 - Do not make a beta installation the only location of important data.
 - Read the release notes for migration, signing, and stable/beta coexistence information.
@@ -37,7 +37,7 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Storage Access Framework folders
 - SD cards and USB drives
 - Permission loss after restart or device reboot
-- Copy, move, rename, delete, recycle-bin, and conflict handling
+- Copy, move, rename, delete, Trash Bin recovery, secure shred, and conflict handling
 
 ### Network and cloud
 
@@ -95,9 +95,22 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 
 - Test image/video previews, background audio, PDF, EPUB/Kindle-family books, HTML/XHTML, MHTML, CHM, and MAFF from local, SAF, root, Vault, archive, network, and cloud sources.
 - Test ICO/CUR, TIFF/BTF, TGA-family, and camera-RAW previews with valid, corrupt, oversized, truncated, and unsupported samples.
+- Open TTF, OTF, variable-font, and TTC samples; verify family/style/weight metadata, editable specimen text, multilingual samples, and the 12–84 sp preview range.
 - Verify common media stays on Media3 and specialist formats can fall back to LibVLC without loops; test notifications, lock screen, seek, audio focus, Bluetooth, and unplug-to-pause.
 - Browse representative RAR/RAR5, CAB, ISO/UDF, WIM, DMG, filesystem, virtual-disk, and split-volume containers; confirm they remain read-only and extraction uses normal safety limits.
 - Confirm DRM/encrypted Kindle content, outbound saved-web subresources, unsafe links, traversal paths, oversized expansion, and unsupported decoding fail safely with **Open with** available.
+
+### Android package installation
+
+- Install, update, reinstall, and downgrade disposable same-signer APKs; confirm ordinary installs use Android's confirmation UI.
+- Open APKS, APKM, and XAPK containers and verify the selected ABI, density, locale, base, and feature splits match the device.
+- Compare installed and incoming version codes, signing certificates, permissions, required features, and components before installation.
+- Confirm a signer mismatch blocks ordinary replacement and is explained beside the version comparison.
+- On a rooted test device, verify **Allow version downgrade** enables only an otherwise valid matching-signer downgrade.
+- On a rooted Core Patch-compatible test device, verify **Allow signature mismatch (root/Core Patch)** requires separate risk confirmation and never claims that WizeFiles patches Android.
+- Test valid and invalid XAPK OBB names, package/version mismatches, traversal paths, conflicts, low storage, destination denial, retry, rollback, and the **app installed, expansion files failed** result.
+- Cancel, background, rotate, kill, and recreate the installer during inspection, review, Android confirmation, session commit, and OBB placement; confirm staged files and abandoned sessions are cleaned safely.
+- Never use an irreplaceable installed app, application data, or OBB directory for initial installer tests.
 
 ### Android package signing and verification
 
@@ -132,6 +145,14 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Review the report before sharing and verify it can be cancelled without transmission.
 - Sanitize filenames, paths, account/provider details, device identifiers, signing material, purchase data, and other private content.
 - Confirm the app can reopen normally after the report is handled or dismissed.
+
+### Trash Bin and secure shred
+
+- Move disposable supported local files and folders to Trash Bin, restore them, and verify ordinary deletion remains recoverable.
+- Securely shred separate disposable writable local targets and confirm the irreversible warning, explicit confirmation, completion result, and absence from Trash Bin.
+- Confirm secure shred is unavailable for remote, SAF, archive, and mixed-provider selections.
+- Interrupt a shred operation and confirm remaining items and partial outcomes are reported accurately.
+- Remember that flash wear levelling, snapshots, backups, and synchronized copies prevent software overwrite from guaranteeing physical erasure.
 
 ### Analysis and security
 

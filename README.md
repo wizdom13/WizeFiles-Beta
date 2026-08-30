@@ -12,7 +12,7 @@ Use this repository to download test builds, report bugs, and share feedback. **
 Download APKs only from this repository's [Releases](../../releases) page.
 
 > [!NOTE]
-> The current release is **[WizeFiles v0.6.5 Beta](../../releases/tag/v0.6.5)** (Android build 605), published on 17 August 2026. Download `WizeFiles_v0.6.5_beta.apk` and its SHA-256 checksum from that release.
+> The current release is **[WizeFiles v0.7.0 Beta](../../releases/tag/v0.7.0)** (Android build 700), published on 30 August 2026. Download `WizeFiles_v0.7.0_beta.apk` and its SHA-256 checksum from that release.
 >
 > Beta builds expire 30 days after compilation. Install a newer beta build to continue testing.
 
@@ -25,16 +25,17 @@ Each release should include:
 
 Do not download WizeFiles Beta APKs from mirrors or third-party websites.
 
-## What's new in version 0.6.5
+## What's new in version 0.7.0
 
-- Browser and Vault now share responsive List/Grid controls, adaptive grid density, manual column overrides, consistent selection behavior, and matching floating action menus.
-- Grid icons are capped for better use of phone, tablet, foldable, and desktop-width layouts, with recycled-icon refresh fixes for live density changes and scrolling.
-- Vault now has Browser-style view/sort access, localized item counts, corrected system-bar spacing, and consistent create dialogs.
-- App Manager protects system selections from uninstall and provides context-aware Enable or Disable actions.
-- Local crash reports are captured only on the device and are shared only when the tester explicitly chooses to send one.
-- Text-editor save handling, browser refresh behavior, system insets, translations, and the navigation drawer received stability and visual polish.
+- Added a verified installer for APK, APKS, APKM, and XAPK packages with device-compatible split selection and pre-install version, signer, permission, feature, and component comparison.
+- Added validated XAPK OBB placement after APK success, including rollback, partial-completion reporting, retry, and a root fallback where Android storage restrictions require it.
+- Added root-gated downgrade and an explicit, separately confirmed signature-mismatch path for devices already using Core Patch or a compatible system modification.
+- Added a TTF, OTF, and TTC Font Viewer with metadata, editable specimen text, multilingual samples, and adjustable preview size.
+- Added secure shred for supported writable local files and folders, clearly separated from recoverable Trash Bin deletion and documented with flash-storage limitations.
+- Polished the installer with a standard back arrow, accessible Material 3 change colors, a compact options icon, readable warnings, and spaced actions.
+- Expanded public documentation for installation security, OBB recovery, Font Viewer behavior, secure shred, and current feature coverage.
 
-See the [changelog](CHANGELOG.md#version-065--2026-08-17) for the full testing focus.
+See the [changelog](CHANGELOG.md#version-070--2026-08-30) for the full testing focus.
 
 ## What WizeFiles offers
 
@@ -43,13 +44,13 @@ WizeFiles is designed for local, removable, network, and cloud storage. Dependin
 - Local storage, SD cards, USB drives, Android Storage Access Framework locations, root, and Shizuku
 - FTP/FTPS, SFTP, SMB, WebDAV, S3-compatible storage, and broad cloud-account support through rclone
 - Multiple tabs, adaptive dual-pane browsing, cross-pane drag-and-drop, mouse context menus, and desktop keyboard shortcuts
-- Conflict-aware copy, move, rename, delete, recycle bin, advanced batch rename, indexed search, and a persistent Transfer Center
+- Conflict-aware copy, move, rename, delete, recoverable Trash Bin, secure local shred, advanced batch rename, indexed search, and a persistent Transfer Center
 - Folder synchronization, scheduled backup, PC/browser access, local HTTP/FTP sharing, and QR-authenticated Nearby Transfer
 - Archive creation, extraction, and transactional ZIP/7z/TAR.XZ mutation plus read-only browsing of extensive archives, filesystems, and disk images
-- Built-in image/video previews, service-backed audio, read-only PDF and e-book readers, saved-web-document viewing, advanced image decoding, and LibVLC fallback for specialist media
+- Built-in image/video previews, service-backed audio, read-only PDF and e-book readers, saved-web-document viewing, a TTF/OTF/TTC Font Viewer, advanced image decoding, and LibVLC fallback for specialist media
 - Installed App Manager with single/split APK backup, package inspection, sharing, opening, and Android-confirmed uninstall
-- APK v1/v2/v3/v4 signing and verification, AAB upload-key signing, and APKS/XAPK/APKM package-container workflows
-- Duplicate detection, storage cleanup, visual disk analysis, encrypted vaults, biometric protection, checksums, and certificate details
+- APK v1/v2/v3/v4 signing and verification, AAB upload-key signing, APKS/XAPK/APKM package-container workflows, and verified APK/APKS/APKM/XAPK installation with XAPK OBB handling
+- Duplicate detection, review-first storage cleanup, visual disk analysis, standalone file encryption, encrypted vaults, biometric protection, checksums, and certificate details
 - Adaptive file/folder icon shapes, Material themes, foldable/tablet layouts, and Android TV support
 
 Features under active development may not be present or complete in every beta release. The release notes and [Known Issues](KNOWN_ISSUES.md) are authoritative for each build.
@@ -64,7 +65,7 @@ Pro expiration never makes existing files, vault data, saved connections, or ope
 
 <h2 align="center">How WizeFiles compares</h2>
 
-The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, competitor references reviewed on 7 August 2026; WizeFiles implementation updated on 17 August 2026.
+The following comparison is based on features publicly documented by each developer and WizeFiles' current product implementation, competitor references reviewed on 7 August 2026; WizeFiles implementation updated on 30 August 2026.
 
 **Legend:** ✓ Included · ◐ Partial, add-on, or narrower support · — Not publicly documented
 
@@ -346,7 +347,7 @@ The following comparison is based on features publicly documented by each develo
       <td align="center">✓ Vault</td>
     </tr>
     <tr>
-      <td align="center">Recycle bin / recoverable deletion</td>
+      <td align="center">Trash Bin / recoverable deletion</td>
       <td align="center"><strong>✓</strong></td>
       <td align="center">◐</td>
       <td align="center">◐</td>

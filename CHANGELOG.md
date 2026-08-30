@@ -6,6 +6,55 @@ This file summarizes public WizeFiles Beta releases. Detailed notes, APKs, and S
 
 No unreleased changes are documented yet.
 
+## Version 0.7.0 — 2026-08-30
+
+### What changed
+
+- Added a WizeFiles-owned Android package installer for APK, APKS, APKM, and XAPK files.
+- Added strict package, version, split, and signer verification with device-compatible ABI, density, and locale split selection.
+- Added a review screen comparing installed and incoming versions, signing identities, permissions, features, and application components.
+- Added normal Android-confirmed installation, root-gated downgrade, and a separately warned signature-mismatch option for devices already using Core Patch or a compatible system modification.
+- Added validated XAPK OBB staging and destination checks, transactional placement, root fallback, rollback, retry, and honest partial-completion reporting.
+- Added a TTF, OTF, and TTC Font Viewer with font metadata, editable specimen text, multilingual samples, and adjustable preview size.
+- Added secure shred for supported writable local files and folders with one-pass zero overwrite, synchronization, and permanent deletion.
+- Renamed Recycle Bin wording to Trash Bin and documented the distinction between recoverable deletion and irreversible shred.
+- Polished the installer with the standard back arrow, Material 3 semantic change colors, an accessible vector options icon, readable signer warnings, and spaced actions.
+- Expanded documentation for installer security, OBB limitations, Font Viewer behavior, secure-shred limitations, and public feature coverage.
+
+### Please test
+
+- Install, update, reinstall, and downgrade same-signer standalone APKs; verify Android confirmation appears for ordinary installs.
+- Open APKS, APKM, and XAPK containers and confirm the selected ABI, density, and locale splits match the device.
+- Compare installed and incoming version codes, signers, permissions, features, and components; confirm signer mismatch blocks ordinary replacement.
+- On a rooted test device, verify downgrade requires explicit approval and signature mismatch additionally requires the separate Core Patch-compatible approval.
+- Install a disposable XAPK containing valid OBB files; verify destination validation, successful placement, retry, rollback, and partial-completion reporting when storage access is unavailable.
+- Open representative TTF, OTF, variable-font, and TTC samples and verify metadata, specimen editing, multilingual samples, and preview sizing.
+- Test Trash Bin recovery and secure shred separately with disposable writable local files and folders; confirm unsupported remote, SAF, archive, and mixed-provider selections cannot be shredded.
+- Rotate, resize, background, cancel, and recreate the installer at each stage and confirm no partial APK session or stale staged files remain.
+
+### Known limitations
+
+- AAB installation is not included; AAB signing and verification remain available.
+- Multi-variant APKS archives are rejected until bundletool targeting can safely choose one variant.
+- Ordinary installation requires Android confirmation. Silent installation, forced downgrade, and signature-mismatch replacement require a compatible privileged path.
+- The signature-mismatch option does not patch Android. It is intended only for rooted devices already using Core Patch or a compatible system modification and Android may still reject the package.
+- APK installation and OBB placement are separate operations. The app may install successfully even if Android blocks the OBB destination; WizeFiles reports that partial result and offers retry.
+- Secure shred is limited to supported writable local paths. Flash wear levelling, snapshots, backups, and synchronized copies prevent a guarantee of physical erasure.
+- TTC files are previewed as collections; WizeFiles does not install fonts.
+
+### Installation notes
+
+- Version 0.7.0 uses the Beta application ID and updates earlier Beta builds in place when signed with the same key.
+- Back up important files and use disposable packages, OBB data, and shred targets for initial testing.
+- Review package names, version codes, signing certificates, selected splits, and OBB destinations before confirming installation.
+- Beta builds expire 30 days after compilation.
+
+### Integrity
+
+- APK: `WizeFiles_v0.7.0_beta.apk`
+- SHA-256: `8a6aec81ee01344fa65f060c39298aace0c151e1e67d44ecdf4da8ecfc5fec1b`
+- Release: [WizeFiles v0.7.0 Beta](../../releases/tag/v0.7.0)
+
 ## Version 0.6.5 — 2026-08-17
 
 ### What changed
