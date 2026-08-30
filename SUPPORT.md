@@ -5,13 +5,14 @@ This repository supports public beta testing of WizeFiles.
 ## Where to post
 
 - Use a [bug report](../../issues/new?template=bug_report.yml) for a reproducible defect.
+- Use a bug report for package-installer, split-selection, XAPK OBB, Font Viewer, Trash Bin, or secure-shred defects, and identify the relevant source/storage type.
 - Use a [storage/provider problem](../../issues/new?template=provider_problem.yml) for local storage, SAF, SD card, USB, cloud, FTP, SFTP, SMB, WebDAV, or S3 problems.
 - Use a [feature request](../../issues/new?template=feature_request.yml) for one focused suggestion.
 - Use [Discussions](../../discussions) for general feedback, testing experiences, and questions.
 
 Search existing issues before creating a new one. Please keep each issue focused on one problem.
 
-When version 0.6.5 offers a local crash report, review and sanitize it before attaching it to a public issue. Sharing is optional and user-initiated; cancelling the Android share sheet keeps the report local.
+When version 0.7.0 offers a local crash report, review and sanitize it before attaching it to a public issue. Sharing is optional and user-initiated; cancelling the Android share sheet keeps the report local.
 
 ## Not supported here
 
