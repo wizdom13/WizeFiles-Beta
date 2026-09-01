@@ -1,407 +1,387 @@
 # WizeFiles Beta
 
-Official public beta channel and future public source repository for **WizeFiles**, a powerful Android file manager for local, removable, network, cloud, encrypted, and application-package workflows.
+**WizeFiles** is a powerful all-in-one Android file manager for local storage, SD cards, USB drives, network shares, cloud storage, archives, media, Android apps, backups, secure storage, and more.
 
-**WizeFiles is now free and open-source software licensed under the GNU General Public License v3.0 (GPL-3.0-only).** Every implemented feature is available without advertisements, subscriptions, in-app purchases, paid entitlements, feature tiers, or paywalls.
+**WizeFiles is free and open source under the GNU GPL v3.0 license.** There are no ads, subscriptions, in-app purchases, paid features, or Pro limits.
 
 > [!IMPORTANT]
-> WizeFiles is transitioning from the former private development repository to this public repository. The source tree is being prepared for publication and will be added here after the remaining cleanup and modifications are completed. Until then, this repository continues to host public beta builds, release notes, issue tracking, and project documentation.
+> The WizeFiles source code is being prepared for public release and will be added to this repository after the remaining modifications are completed. For now, this repository is the official home for public beta builds, release notes, bug reports, and feedback.
 
 > [!WARNING]
-> Beta builds may contain defects, incomplete changes, or migrations that affect settings and app data. Keep backups of important files and never use a beta build as the only copy of critical data.
+> WizeFiles Beta is for testing. Keep a backup of important files and do not use a beta build as the only copy of critical data.
 
-## Download a beta build
+## Download WizeFiles Beta
 
-Download WizeFiles Beta only from this repository's [Releases](../../releases) page.
+Download beta builds only from this repository's [Releases](../../releases) page.
 
 > [!NOTE]
-> The current release is **[WizeFiles v0.7.0 Beta](../../releases/tag/v0.7.0)** (Android build 700), published on 30 August 2026. Download `WizeFiles_v0.7.0_beta.apk` together with its published SHA-256 checksum.
+> The current release is **[WizeFiles v0.7.0 Beta](../../releases/tag/v0.7.0)** (build 700), published on 30 August 2026.
 >
 > Beta builds expire 30 days after compilation. Install a newer beta build to continue testing.
 
-Each beta release should include:
+For safety, compare the downloaded APK with the SHA-256 checksum included with the release.
 
-- The APK and its version/build number
-- Release notes and testing focus
-- Known limitations or migration warnings
-- A SHA-256 checksum for integrity verification
+## What's new in 0.7.0
 
-Do not download WizeFiles Beta APKs from mirrors or unofficial third-party websites.
+- New built-in installer for **APK, APKS, APKM, and XAPK** packages
+- Review app version, signing certificate, permissions, features, and components before installation
+- Automatically select the correct split APKs for your device
+- Install XAPK expansion/OBB files when included
+- Optional root-assisted downgrade and advanced installation options
+- **Open** the newly installed or updated app directly after installation
+- Open Android packages from other apps using **Open with WizeFiles**
+- New **Font Viewer** for TTF, OTF, and TTC fonts
+- New **Secure Shred** option for supported local files and folders
+- Improved Browser and Vault file-list layout
+- Improved file and folder icons using Material 3 styling
+- **Trash Bin** replaces the previous Recycle Bin naming
+- All previous paid/Pro restrictions removed
+- WizeFiles is now licensed under **GPL-3.0**
 
-## What's new in version 0.7.0
-
-- Added a verified installer for APK, APKS, APKM, and XAPK packages.
-- Added device-compatible split selection and pre-install comparison of versions, signing identities, permissions, features, and components.
-- Added validated XAPK OBB placement with rollback, partial-completion reporting, retry, and root fallback where Android storage restrictions require it.
-- Added root-gated downgrade support and a separately confirmed signature-mismatch path for devices already using Core Patch or a compatible system modification.
-- Added an **Open** action after successful installation when the installed application is launchable.
-- Added Android **Open with** routing for APK, APKS, APKM, and XAPK packages.
-- Added a TTF, OTF, and TTC Font Viewer with metadata, editable specimen text, multilingual samples, and adjustable preview size.
-- Added secure shred for supported writable local files and folders, clearly separated from recoverable Trash Bin deletion.
-- Refreshed Browser and Vault list presentation, including Material 3 icon containers, folder item counts, file sizes, and modified dates.
-- Renamed the internal Recycle Bin implementation to **Trash Bin**, including migration of existing stored items.
-- Removed the former purchase, Pro, entitlement, and license-verification system.
-- Licensed WizeFiles under GPL-3.0-only and made every implemented feature available to every user.
-
-See the [changelog](CHANGELOG.md#version-070--2026-08-30) for release-specific testing details.
+See the [changelog](CHANGELOG.md#version-070--2026-08-30) for more release details.
 
 # Features
 
-WizeFiles is designed as a complete file-management environment rather than only a local file browser. Feature availability can depend on the Android version, storage provider, granted permissions, device capabilities, or optional root/Shizuku access.
+## File manager
 
-## File browsing and organization
-
-- Local internal storage browsing
-- SD card and removable-storage support
-- USB storage support
-- Android Storage Access Framework (SAF) locations and document trees
+- Browse internal storage, SD cards, USB drives, and Android storage providers
 - Multiple tabs
-- Adaptive dual-pane browsing on suitable screens
-- Cross-pane drag and drop
-- Mouse context menus
-- Desktop-style keyboard shortcuts where supported
+- Dual-pane browsing on tablets, foldables, and larger screens
+- Drag and drop between panes
+- Mouse right-click menus and keyboard shortcuts
 - Bookmarks and favorite folders
-- Standard Android folders and configurable storage roots
-- Configurable default directory
-- File and folder sorting
-- Filtering and search
-- Indexed search workflows
-- File and folder creation
-- Rename and advanced batch rename
-- Copy, move, duplicate, and delete operations
-- Conflict-aware replacement and keep-both behavior
+- Fast search and filtering
+- Sort files by name, size, date, type, and other options
+- Create, copy, move, duplicate, rename, and delete files and folders
+- Advanced batch rename
+- Keep-both and conflict handling when files already exist
 - File and folder shortcuts
-- Android launcher/download entry points
-- Configurable filename ellipsizing and list animation
-- Adaptive file/folder icon shapes and Material 3 presentation
+- Modern Material 3 interface
 
 ## Trash Bin and secure deletion
 
-- Recoverable **Trash Bin** deletion for supported local storage
-- Restore deleted files from Trash Bin
-- Permanent deletion
-- Secure shred for supported writable local files and folders
-- One-pass zero overwrite, sync, and deletion for eligible local files
+- Recover deleted files from the **Trash Bin**
+- Permanently delete files when needed
+- **Secure Shred** for supported writable local files and folders
 - Clear separation between recoverable deletion and irreversible shredding
-- Provider-aware restrictions so unsupported SAF, cloud, network, archive, and other remote paths are not falsely presented as securely overwritable
 
-## File operations and Transfer Center
+## Transfer Center
 
-- Background copy, move, delete, archive, extract, and related file jobs
-- Persistent Transfer Center
-- Progress tracking
-- Pause/resume where supported by the operation/provider
-- Retry and recovery flows
-- Completed, failed, and canceled history
-- Start/end timestamps
-- Conflict and user-decision handling
-- Provider-aware error classification
-- Partial-completion reporting
-- Metadata-preservation reporting
-- Cooperative cancellation
-- Resumable/checkpoint-aware workflows where supported
-- Queue and durable operation state across long-running transfers
+- Run file operations in the background
+- See active, completed, failed, and canceled jobs
+- View progress and transfer history
+- Pause, resume, retry, or cancel supported operations
+- Handle file conflicts without losing the rest of a transfer
+- Continue long-running work without keeping the file browser open
 
-## Local, network, and cloud storage
+## Cloud and network storage
 
-- Local Android filesystem access
-- Root-capable local access where explicitly enabled
-- Shizuku-assisted workflows where supported
-- SAF/document-provider storage
-- FTP and FTPS
+Connect to files stored outside your phone:
+
+- FTP / FTPS
 - SFTP
-- SMB/LAN shares
+- SMB / Windows shares / NAS
 - WebDAV
 - S3-compatible storage
-- Direct cloud accounts through embedded rclone
-- Generated rclone provider setup
-- Simple WebDAV/S3 configuration flows
-- rclone configuration import
-- Optional rclone power-user setup
-- Cloud-app mediated storage entries
-- Remote-aware copy, move, delete, traversal, and metadata handling
-- Cached/pending transfer presentation for cloud operations
+- Many cloud services through built-in **rclone** support
+- Android document providers and cloud apps
 
-## Synchronization, backup, and scheduled work
+WizeFiles can browse, copy, move, rename, and manage files across supported local, network, and cloud locations.
+
+## Sync and backup
 
 - Folder synchronization
-- Scheduled sync/backup workflows
-- Local-to-remote and remote-aware traversal
-- Background execution through Android scheduling infrastructure
-- Transfer-state persistence and recovery
+- Scheduled sync and backup jobs
+- Local-to-local, local-to-remote, and remote-to-local workflows
+- Saved backup/sync profiles
 - Settings backup and restore
-- Tolerant settings restore that can skip obsolete incompatible non-security settings while restoring the remaining configuration
-- Backup profile management
 
-## Nearby and device-to-device transfer
+## Nearby Transfer
 
-- Direct nearby phone-to-phone transfer
-- QR-authenticated pairing
-- Google Nearby transport integration
-- Durable transfer/session state
-- Duplicate and late-payload protection
-- Payload correlation and recovery rules
-- Reconnect-aware behavior after process recreation
+- Send files directly between nearby Android devices
+- QR-based pairing
+- No need to upload files to the cloud first
+- Transfer progress and history through Transfer Center
 
-## PC/browser and local sharing
+## Access your phone from a computer
 
-- Access-phone-from-PC/browser workflows
-- Local web/HTTP sharing features
-- Local FTP/server-style sharing features where enabled
-- Built-in sharing rather than requiring an external plugin
-- Android Share/Open integration
-- Save shared content into WizeFiles
+- Built-in web/browser access
+- Local network sharing
+- FTP-style access where enabled
+- Share files from your phone without installing a separate plugin
 
-## Archives, compressed files, filesystems, and disk images
+## Archives and compressed files
 
-- Archive browsing
-- Archive creation
-- Extraction
-- Password-protected archive flows
-- Transactional mutation for supported writable archive formats
-- ZIP workflows
-- 7z workflows
-- TAR/XZ and related compressed formats
-- Broad read-only archive support
-- Read-only browsing support for additional filesystem/disk-image formats where supported by the bundled native/archive stack
-- Archive filename-encoding options
-- Defensive validation for malformed entries, traversal attempts, oversized input, and hostile archive metadata
+- Create and extract archives
+- Browse archives without extracting everything first
+- Password-protected archives
+- Edit supported archive contents
+- ZIP
+- 7z
+- TAR and compressed TAR formats
+- Broad read-only support for many additional archive and disk-image formats
 
-## Images and video
+## Image and video viewer
 
-- Built-in image preview
-- Built-in video preview
-- Local, SAF, network, and cloud-backed media opening
-- Large-image tiled zoom
-- EXIF orientation handling
-- GIF playback
-- SVG rendering
-- WebP support
-- Rotation
-- Sibling-file swiping
-- Video play/pause and seeking
-- Buffering feedback
+- Built-in image viewer
+- Built-in video player
+- Open local, network, cloud, and SAF-backed media
+- Zoom large images
+- GIF, SVG, and WebP support
+- Rotate images and video
+- Swipe between files in the same folder
+- Video seeking and playback-speed controls
 - Fullscreen playback
-- Playback-speed control
-- Media3-based playback
-- LibVLC fallback for specialist containers/codecs
-- Image, audio, and video thumbnail generation
-- Media metadata in File Properties
-- **Open with another app** when preferred
+- Media thumbnails and metadata
+- **Open with another app** at any time
 
 ## Audio player
 
-- Dedicated service-backed audio playback
-- Folder-based playback queue
+- Built-in audio player
 - Background playback
-- Media notification controls
-- Lock-screen controls
-- Headset/Bluetooth controls
-- Metadata and artwork
+- Notification and lock-screen controls
+- Bluetooth/headset controls
+- Album artwork and metadata
+- Folder-based play queue
 - Seeking and queue controls
-- LibVLC fallback for specialist audio formats while retaining the same media session
+- Support for additional media formats through LibVLC fallback
 
 ## PDF reader
 
-- Built-in read-only PDF viewer
-- Progressive page display
+- Built-in PDF viewer
 - Zoom
-- Text search
-- Selection
-- Password prompts
-- Safe hyperlink handling
-- Fullscreen mode
-- Adaptive two-page tablet layouts
+- Search text
+- Text selection
+- Password-protected PDFs
+- Safe links
+- Fullscreen reading
+- Two-page layouts on larger screens
 
 ## E-books, documents, and text
 
-- Built-in e-book/document reading workflows
-- Saved web-document viewing
-- Text viewing and editing
-- Broad `text/*` and common script/configuration MIME handling
-- Android external edit integration
-- Save As support for shared content
-- Provider-aware write permission checks before editing
+- E-book reader
+- Saved web-document viewer
+- Text-file viewer and editor
+- Open many common text, script, and configuration files
+- Edit supported files directly
+- Open or edit files with another Android app when preferred
 
 ## Font Viewer
 
-- TTF preview
-- OTF preview
-- TTC preview
-- Local, removable, network, cloud, and SAF-backed font opening
-- Font format/name metadata
-- Editable specimen text
+Preview fonts directly inside WizeFiles:
+
+- TTF
+- OTF
+- TTC
+- Font name and format information
+- Custom sample text
 - Multilingual samples
-- Adjustable 12–84 sp preview size
-- Bounded private staging for provider-backed fonts
+- Adjustable preview size
+
+Fonts can be opened from local storage, removable storage, network shares, cloud storage, or Android storage providers.
 
 ## App Manager
 
-- Installed-app inventory for the current Android profile
-- Search, filter, and sort installed apps
+- Browse installed apps
+- Search, filter, and sort apps
 - Open installed apps
-- Inspect application/package details
-- Android-confirmed uninstall
-- System-app-aware action restrictions
-- Enable/disable controls where Android privileges allow them
-- Secure APK sharing
-- Single APK backup
-- Split APK/APKS backup
-- Durable app-backup jobs through Transfer Center
-- Backups intentionally exclude application data
+- View app/package details
+- Uninstall apps using Android confirmation
+- Enable or disable apps where Android allows it
+- Share installed APKs
+- Back up regular APKs
+- Back up split apps as APKS
+- Send app-backup jobs to Transfer Center
 
-## APK, package-container, and signing tools
+WizeFiles backs up the application packages, not private application data.
 
-- APK inspection
-- APK signing and signature verification workflows
-- APK v1/v2/v3/v4 signature-related tooling where applicable
-- Certificate details
-- AAB upload-key signing workflows
-- APKS, APKM, and XAPK container inspection
-- Icon extraction/preview workflows for Android package formats
-- Split-set validation
-- Signing-identity comparison
-- Package metadata inspection
+## APK and Android package tools
+
+- Inspect APK files
+- View package information
+- View signing certificates
+- Verify Android package signatures
+- APK signing tools
+- AAB upload-key signing tools
+- Inspect APKS, APKM, and XAPK packages
+- Extract/preview icons from supported Android package formats
 
 ## Android package installer
 
-WizeFiles includes its own verified Android package review and installation flow for:
+Install and review:
 
-- APK
-- APKS
-- APKM
-- XAPK
+- **APK**
+- **APKS**
+- **APKM**
+- **XAPK**
 
-Installer capabilities include:
+Before installing, WizeFiles can show:
 
-- Safe staging of incoming provider-backed packages
-- Device-compatible ABI, density, and locale split selection
-- Base/feature split retention
-- Package/version consistency checks
-- Signer consistency checks across splits
-- Comparison against an already installed package
-- Version-change presentation
-- Permission comparison
-- Feature comparison
-- Component comparison
-- Android PackageInstaller confirmation for ordinary installs
-- Root-backed installation when explicitly selected and available
-- Explicit root-gated downgrade approval
-- Separately confirmed signature-mismatch replacement for devices already using Core Patch or another compatible system modification
-- XAPK OBB validation and placement
-- OBB rollback and retry after partial completion
-- **Open** after successful installation when the target package exposes a launchable activity
+- App version changes
+- Signing-certificate compatibility
+- Added or removed permissions
+- App features and components
+- Correct split APKs for your device
+- XAPK expansion/OBB files
 
-**AAB installation is not currently supported.** WizeFiles will not pretend to install AAB files until a proper bundletool-based build pipeline is implemented.
+Normal installations use Android's standard confirmation screen. Advanced root users can optionally use additional downgrade or signature-replacement options on compatible modified devices.
 
-## Storage Cleanup Wizard
+**AAB files can be signed but are not directly installable in WizeFiles.**
 
-- Review-first cleanup workflow
-- Duplicate media detection
-- Duplicate file detection
-- Large-file analysis
-- APK/package cleanup categories
-- Junk analysis with conservative classification
-- Unused-app analysis that excludes system applications
-- Clear item details including path/name, size, and date information
-- Default all-deselected safety behavior
-- Ignore/exclude options
-- Ability to choose which duplicate copy to keep
-- Provider-aware deletion behavior
-- Visual disk/storage analysis
+## Storage Cleanup
 
-## Encryption, Vaults, and privacy
+A review-first cleanup wizard helps find:
+
+- Duplicate photos and media
+- Duplicate files
+- Large files
+- APK/package files
+- Junk files
+- Unused apps
+- Storage-heavy folders
+
+Nothing is preselected by default. You choose what to remove, can ignore items, and can decide which duplicate copy to keep.
+
+## Storage Analyzer
+
+- Visual disk-usage overview
+- Find folders and files taking the most space
+- Quickly identify large storage areas before deleting anything
+
+## Vaults and privacy
 
 - Encrypted Vaults
-- Vault lifecycle and session management
-- Vault lock/relock behavior
-- Biometric protection
-- App password support
-- Optional protection of browser access
-- Standalone file-encryption workflows
-- Recovery/state protections around vault mutations
-- Local crash-report capture controlled by the user
-- Crash reports are not automatically uploaded
-- Users choose whether to share or delete pending crash reports
-- No advertisements
-- No analytics-based advertising profile
-- No subscription or purchase entitlement system
+- App password protection
+- Biometric unlock
+- Automatic relocking options
+- Protect access to the file browser
+- Standalone file-encryption tools
+- Crash reports stay on the device unless you choose to share them
+- No advertising
+- No purchase tracking or paid entitlement system
 
-## File Properties and technical details
+## File Properties
 
-- General file/folder properties
+View useful details such as:
+
+- File and folder information
+- Size and dates
 - Checksums
-- Media metadata
-- APK/package information
-- Signing certificate details
-- Permission information
-- Provider/storage metadata
-- Native/JNI-assisted low-level file operations where appropriate
+- Image/audio/video metadata
+- APK information
+- App signing certificate details
+- Permissions
 
-## Android integration and device support
+## Android, tablet, foldable, and TV support
 
-- Android 11+ (`minSdk 30` in the current codebase)
-- Modern Android storage APIs
-- All-files access for full file-manager behavior where granted
-- Android Open/Edit/Share integrations
-- Android package install/uninstall confirmation flows
-- Notifications for long-running operations
-- Foreground services for applicable transfers/media playback
-- Android TV / Leanback launcher support
-- Tablet layouts
-- Foldable/adaptive layouts
-- Dual-pane behavior on suitable displays
-- Mouse and physical-keyboard usability
-- Material themes
-- Light/dark appearance support
-- Black night-mode option
-- Configurable locale/language support
+- Phones
+- Tablets
+- Foldables
+- Adaptive dual-pane layouts
+- Mouse support
+- Physical keyboard shortcuts
+- Android TV / Leanback support
+- Light and dark themes
+- Black night mode
+- Multiple interface languages
+- Customizable file-list behavior and appearance
 
-## Root and advanced access
+## Root and Shizuku
 
-Root is optional and is never required for ordinary WizeFiles usage. Where explicitly enabled, advanced workflows can use root for operations Android normally restricts, including selected file operations, package-installation cases, and XAPK OBB placement.
+Root is **optional**. WizeFiles works normally without it.
 
-WizeFiles does **not** itself disable Android package verification. The optional signature-mismatch installer path is intended only for devices where the user has already installed Core Patch or another compatible system modification, and Android may still reject the operation.
+Advanced users can enable root or supported Shizuku-assisted functions for operations Android normally restricts. Root-related options are shown only where they are useful.
+
+# How WizeFiles compares
+
+The table below compares commonly advertised capabilities of popular Android file managers. Competitor information is based on publicly documented features reviewed on 7 August 2026; WizeFiles information reflects the product through version 0.7.0.
+
+**Legend:** ✓ Included · ◐ Partial, add-on, plugin, or narrower support · — Not publicly documented
+
+| Feature | **WizeFiles** | Solid Explorer | MiXplorer | Files by Google | X-plore | Total Commander | Cx | ASTRO |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **Browsing and organization** |  |  |  |  |  |  |  |  |
+| Local, SD card, and USB files | **✓** | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Multi-tab browsing | **✓** | ◐ | ✓ | — | — | ◐ | — | — |
+| Dual-pane browsing | **✓** | ✓ | ✓ | — | ✓ | ✓ | — | — |
+| Drag and drop between panes | **✓** | ✓ | ✓ | — | ◐ | ◐ | — | — |
+| Indexed instant search | **✓** | ✓ | ◐ | ◐ | ◐ | ◐ | ◐ | ◐ |
+| Advanced batch rename | **✓** | ✓ | ✓ | — | ✓ | ✓ | ◐ | ◐ |
+| Bookmarks / favorite folders | **✓** | ✓ | ✓ | ◐ | ✓ | ✓ | ✓ | ✓ |
+| **Cloud, network, and transfers** |  |  |  |  |  |  |  |  |
+| Direct cloud accounts | **✓ Broad via rclone** | ✓ Broad | ✓ Broad | ◐ Drive backup | ✓ Broad | ◐ Plugins | ✓ | ✓ |
+| SMB / LAN client | **✓** | ✓ | ✓ | — | ✓ | ◐ Plugin | ✓ | — |
+| FTP / FTPS client | **✓** | ✓ | ✓ | — | ✓ | ◐ Plugin | ✓ | — |
+| SFTP client | **✓** | ✓ | ✓ | — | ✓ | ◐ Plugin | ✓ | — |
+| WebDAV client | **✓** | ✓ | ✓ | — | ✓ | ◐ Plugin | ✓ | — |
+| S3-compatible storage | **✓** | — | ◐ Add-on/provider | — | — | — | — | — |
+| Persistent Transfer Center | **✓** | ✓ Resumable | ◐ Task queue | — | ◐ | ◐ | ◐ | ◐ |
+| Pause, resume, retry, and job history | **✓** | ✓ | ◐ | — | ◐ | ◐ | ◐ | ◐ |
+| Folder sync and scheduled backup | **✓** | ◐ Backup | ◐ Tasks | ◐ Drive backup | — | — | — | ◐ Cloud backup |
+| Access phone from PC/browser | **✓ Web** | ✓ Web + FTP | ✓ HTTP + FTP | — | ✓ Web | ◐ Wi-Fi plugin | ✓ FTP | — |
+| Direct nearby phone-to-phone transfer | **✓ QR-authenticated** | ◐ Web share | ✓ TCP receive | ✓ Quick Share | ✓ Wi-Fi share | ◐ Plugin | — | — |
+| **Archives, security, and recovery** |  |  |  |  |  |  |  |  |
+| Create and extract archives | **✓** | ✓ | ✓ Extensive | ◐ Basic | ✓ | ✓ | ✓ | ◐ |
+| Password-protected archives | **✓** | ✓ | ✓ | — | ◐ | ◐ | ◐ | — |
+| Edit archive contents in place | **✓ ZIP/7z/TAR.XZ** | ◐ | ✓ ZIP | — | ✓ ZIP | ✓ ZIP | — | — |
+| Encrypted vault / protected folder | **✓** | ✓ AES-256 | ✓ | ✓ Safe Folder | ✓ | — | — | ✓ |
+| Biometric unlock / app lock | **✓** | ✓ Vault | ◐ | ◐ Safe Folder | ✓ Vault | — | — | ✓ Vault |
+| Trash Bin / recoverable deletion | **✓** | ◐ | ◐ | ✓ | ✓ | — | ✓ | ◐ |
+| **Storage intelligence and power tools** |  |  |  |  |  |  |  |  |
+| Storage analyzer / cleanup | **✓** | ✓ | ◐ | ✓ | ✓ Disk Map | — | ✓ | ✓ |
+| Duplicate-file finder | **✓** | ✓ | — | ✓ | — | — | ✓ | — |
+| Visual disk-map treemap | **✓** | ◐ Analyzer | — | — | ✓ | — | ◐ Charts | — |
+| Root access | **✓** | ✓ | ✓ | — | ✓ | ✓ | ◐ Shizuku | — |
+| Shizuku-assisted access | **✓** | — | — | — | — | — | ✓ | — |
+| Checksums, package signing, and certificate details | **✓** | ◐ | ✓ | — | ◐ | ◐ | ◐ Apps | ◐ Apps |
+| Installed-app manager / APK backup | **✓ APK + split APKS** | ◐ App collection | ✓ | ◐ App sharing | ✓ | ✓ | ✓ | ✓ |
+| Text editor | **✓** | ✓ | ✓ | — | ◐ Viewer | ✓ | ◐ Viewer | ◐ Viewer |
+| Image editing | **◐ External app** | — Viewer | — Viewer | — | — Viewer | — | — | — |
+| Video editing | **◐ External app** | — Player | — Player | — Player | — Player | — | — Player | — |
+| Built-in gallery / full music player | **— Focused viewers/player** | ✓ | ✓ | ✓ | ✓ | ◐ Player | ✓ | ◐ Media views |
+| Android TV support | **✓** | ◐ | ◐ | — | ✓ | ◐ | ✓ | — |
+| Deep theme and behavior customization | **✓** | ✓ | ✓ Extensive | — Limited | ✓ | ◐ | ◐ | ◐ |
+| **Feature coverage rating** | **9.2/10** | 7.6/10 | 7.4/10 | 2.8/10 | 7.0/10 | 4.6/10 | 5.5/10 | 3.3/10 |
+| **UI polish** | **9.0/10** | 9.0/10 | 7.5/10 | 9.5/10 | 6.5/10 | 5.5/10 | 8.0/10 | 7.5/10 |
+| **UI character** | **Modern** | Modern | Dense / customizable | Modern / simple | Powerful / dated | Utilitarian / dated | Clean / conservative | Friendly / older |
+
+**Comparison note:** Feature coverage uses one point for full support and half a point for partial, plugin-based, or narrower support across the feature rows above. UI polish is an editorial assessment of visual design, consistency, and general usability rather than an objective benchmark. Features can change over time.
 
 # Free and open source
 
-WizeFiles has moved away from its former commercial entitlement model.
+WizeFiles is now completely free to use:
 
-- No Free/Pro feature split
-- No Google Play Billing integration
+- No Free/Pro split
 - No subscriptions
 - No in-app purchases
-- No signed entitlement/license server
-- No feature cardinality limits tied to payment
 - No advertisements
-- All implemented capabilities are available to all users
-
-WizeFiles is licensed under **GNU GPL-3.0-only**.
-
-The public source tree is currently being prepared and will be added to this repository after the remaining code cleanup and project modifications are completed. Once published, this repository will contain the source, build instructions, license material, development documentation, and contribution workflow alongside beta releases.
-
-## Contributing and feedback
-
-Until the source tree is published, the best way to contribute is to:
-
-- Test the latest beta release
-- Report reproducible bugs
-- Include Android/device/version information
-- Include screenshots or logs when they help explain a problem
-- Suggest usability improvements and missing workflows
-
-After the source is published, code contributions and pull requests will also be documented here.
-
-## Known issues
-
-See [KNOWN_ISSUES.md](KNOWN_ISSUES.md) before reporting a problem. Features under active development can vary between beta releases, so the release notes and Known Issues file remain authoritative for a particular build.
-
-## License
+- No paid limits on connections, vaults, tools, or advanced features
+- Every implemented feature is available to every user
 
 WizeFiles is licensed under the **GNU General Public License v3.0 only (GPL-3.0-only)**.
 
-The complete license text and third-party notices will be distributed with the public source tree. Third-party components remain subject to their respective licenses and notices.
+The source code will be added to this repository after the remaining project modifications are completed.
+
+## Report a problem or suggest a feature
+
+Before reporting a problem, check [Known Issues](KNOWN_ISSUES.md).
+
+- [Bug report](../../issues/new?template=bug_report.yml)
+- [Storage/provider problem](../../issues/new?template=provider_problem.yml)
+- [Feature request](../../issues/new?template=feature_request.yml)
+- [Discussions](../../discussions)
+
+Please remove private information from screenshots and logs before posting them publicly.
+
+## Useful links
+
+- [Releases](../../releases)
+- [Changelog](CHANGELOG.md)
+- [Known Issues](KNOWN_ISSUES.md)
+- [Support](SUPPORT.md)
+- [Privacy](PRIVACY.md)
+- [Security](SECURITY.md)
 
 ---
 
-**WizeFiles** — one file manager for local storage, networks, cloud accounts, archives, media, Android packages, cleanup, synchronization, secure storage, and advanced Android workflows.
+**WizeFiles** — one file manager for local storage, network shares, cloud accounts, archives, media, Android packages, cleanup, backups, secure storage, and more.
