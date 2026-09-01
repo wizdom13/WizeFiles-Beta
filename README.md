@@ -2,7 +2,7 @@
 
 Official public beta channel for **WizeFiles**, a modern Android file manager.
 
-Use this repository to download test builds, report bugs, and share feedback. **The WizeFiles source code is proprietary and is not included in this repository.**
+Use this repository to download test builds, report bugs, and share feedback. WizeFiles is free and open-source software licensed under GPL-3.0; the source is maintained in the [WizeFiles repository](https://github.com/wizdom13/WizeFiles).
 
 > [!WARNING]
 > Beta builds may contain defects, incomplete features, or changes that affect stored settings and app data. Keep backups of important files and do not use a beta build as the only copy of critical data.
@@ -55,13 +55,16 @@ WizeFiles is designed for local, removable, network, and cloud storage. Dependin
 
 Features under active development may not be present or complete in every beta release. The release notes and [Known Issues](KNOWN_ISSUES.md) are authoritative for each build.
 
-## Beta access and WizeFiles Pro
+## Open features and GPL-3.0
 
-Official Beta builds provide a time-limited **WizeFiles Pro** entitlement so testers can exercise advanced workflows without making a purchase. Beta and debug builds do not launch real Google Play checkout.
+Every implemented WizeFiles feature is available in every build. There are no in-app purchases,
+subscriptions, advertisements, paid entitlements, feature tiers, or artificial limits on remote
+connections, vaults, batch operations, sync, package signing, root tools, or built-in servers.
 
-The future production Free tier keeps core local and SAF file management, tabs, viewers, archive browsing and extraction, signature verification, Transfer Center history and recovery, one saved remote connection, one vault, and single-app App Manager actions. Pro covers advanced creation and execution such as dual-pane workflows, sync and schedules, package signing, archive mutation, batch App Manager operations, additional remote connections and vaults, rclone power-user setup, root access, and built-in local servers.
-
-Pro expiration never makes existing files, vault data, saved connections, or operation history inaccessible. Purchase activation in production will require a backend-verified, signed entitlement; a local purchase state alone cannot grant Pro.
+Beta expiration is a testing-safety mechanism only; it is not a license or feature restriction.
+Install a current beta to continue testing. WizeFiles source code is licensed under the GNU General
+Public License version 3, while third-party components remain under their respective compatible
+licenses.
 
 <h2 align="center">How WizeFiles compares</h2>
 
@@ -575,10 +578,10 @@ Security vulnerabilities must not be reported through public issues. Follow [SEC
 - [Support](SUPPORT.md)
 - [Privacy information](PRIVACY.md)
 - [Security policy](SECURITY.md)
-- [Proprietary distribution terms](LICENSE.md)
+- [GNU GPL-3.0 license](LICENSE.md)
 
 ## Repository scope
 
-This repository contains beta documentation, feedback templates, and release binaries only. It does not accept source-code pull requests and does not grant permission to copy, modify, redistribute, or create derivative works from WizeFiles except where applicable law requires otherwise.
+This repository contains beta documentation, feedback templates, and release binaries. Source-code contributions belong in the [main WizeFiles repository](https://github.com/wizdom13/WizeFiles). WizeFiles may be used, studied, modified, and redistributed under GPL-3.0.
 
-Copyright © WizeFiles. All rights reserved.
+Copyright © 2026 Wissam Chehade. Licensed under GPL-3.0-only.

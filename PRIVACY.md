@@ -14,7 +14,6 @@ Do not publish:
 - Vault contents, encryption material, biometric information, or recovery keys
 - APK/AAB signing keys, keystores, key-store passwords, or private certificates
 - Private APK/APKS/APKM/XAPK files, OBB expansion data, package inventories, signer details, or installer screenshots that expose private applications
-- Google Play purchase tokens, receipts, signed license documents, or installation identifiers
 - Unredacted logs, crash reports, screenshots, or screen recordings
 - Device identifiers that are not necessary for diagnosis
 
@@ -24,7 +23,7 @@ WizeFiles maintainers may ask for the app version, Android version, device model
 
 Version 0.7.0 can capture crash reports locally on the device. WizeFiles does not automatically upload these reports. A report leaves the device only when the tester explicitly chooses to share it through an Android share target. Review and sanitize every report before sharing because it may contain filenames, paths, provider details, device information, or recent application state.
 
-Use placeholders such as `[ACCOUNT]`, `[SERVER]`, `[PRIVATE_PATH]`, `[SIGNING_KEY_REMOVED]`, and `[TOKEN_REMOVED]`. Signing and purchase reports should describe the key-store type, signature schemes, product type, and error state without attaching secrets, purchase evidence, or complete signed-license payloads. If a report cannot be safely sanitized, do not post it publicly.
+Use placeholders such as `[ACCOUNT]`, `[SERVER]`, `[PRIVATE_PATH]`, `[SIGNING_KEY_REMOVED]`, and `[TOKEN_REMOVED]`. Package-signing reports should describe the key-store type, signature schemes, and error state without attaching secrets or private-key material. If a report cannot be safely sanitized, do not post it publicly.
 
 ## Security reports
 

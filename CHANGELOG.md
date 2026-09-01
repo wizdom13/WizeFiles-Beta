@@ -1,5 +1,12 @@
 # Changelog
 
+## Upcoming open-source transition
+
+- Removed Google Play Billing, purchase and restore UI, signed purchase-license verification, Pro entitlements, and all Free/Pro feature limits from the development branch.
+- Made every implemented capability available in every build without purchases, subscriptions, advertisements, or feature paywalls.
+- Relicensed WizeFiles under the GNU General Public License version 3 (GPL-3.0-only).
+- The published 0.7.0 Beta remains the current downloadable build until a newer GPL/open-feature beta is released.
+
 This file summarizes public WizeFiles Beta releases. Detailed notes, APKs, and SHA-256 checksums are published on the [Releases](../../releases) page.
 
 ## Unreleased

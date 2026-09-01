@@ -27,7 +27,7 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 
 - Confirm a newly installed or updated minified Beta reaches the browser without a startup crash.
 - Open **About → WizeFiles Pro** and verify the valid Beta reports active Pro access.
-- Confirm Beta shows no prices, purchase offers, restore checkout, or route into Google Play Billing.
+- Confirm every implemented feature is available without prices, purchases, subscriptions, entitlement prompts, restore controls, or Google Play Billing.
 - Exercise dual-pane, sync/schedules, package signing, archive mutation, batch App Manager actions, additional connections/vaults, rclone power-user setup, root, and local-server entry points while Beta Pro is active.
 - Verify existing files, vaults, connections, and Transfer Center history remain readable after restarts and configuration changes.
 
@@ -119,7 +119,7 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 - Test local, SAF, root, archive, network, cloud, and Vault sources/destinations, keep-both conflicts, cancellation, process interruption, and password re-entry recovery.
 - Test wrong passwords, missing aliases, malformed packages, tampered outputs, existing `.idsig` files, and attempts to overwrite the input.
 - Test AAB upload-key signing/verification and APKS/XAPK/APKM workflows; verify every contained APK shares the intended signer and non-APK payloads remain unchanged.
-- Never include private keys, keystores, passwords, certificates containing private identity data, or purchase tokens in a report.
+- Never include private keys, keystores, passwords, or certificates containing private identity data in a report.
 
 ### Appearance and content visuals
 
@@ -143,7 +143,7 @@ Thank you for helping test WizeFiles. Good reports describe one problem clearly,
 
 - Confirm a captured report remains on the device until the user chooses a share target.
 - Review the report before sharing and verify it can be cancelled without transmission.
-- Sanitize filenames, paths, account/provider details, device identifiers, signing material, purchase data, and other private content.
+- Sanitize filenames, paths, account/provider details, device identifiers, signing material and other private content.
 - Confirm the app can reopen normally after the report is handled or dismissed.
 
 ### Trash Bin and secure shred
