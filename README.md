@@ -2,7 +2,10 @@
 
 Official public beta channel for **WizeFiles**, a modern Android file manager.
 
-Use this repository to download test builds, report bugs, and share feedback. **The WizeFiles source code is proprietary and is not included in this repository.**
+Use this repository to download test builds, report bugs, and share feedback. WizeFiles is free and open-source software licensed under **GPL-3.0-only**. Every implemented feature is available without purchases, subscriptions, advertisements, paid entitlements, or feature paywalls.
+
+> [!IMPORTANT]
+> This repository currently contains beta binaries, documentation, feedback templates, and release history. The source tree is being prepared and will be published **in this repository** after the remaining project changes are completed. Until that publication, this repository is not yet a complete source distribution.
 
 > [!WARNING]
 > Beta builds may contain defects, incomplete features, or changes that affect stored settings and app data. Keep backups of important files and do not use a beta build as the only copy of critical data.
@@ -39,29 +42,87 @@ See the [changelog](CHANGELOG.md#version-070--2026-08-30) for the full testing f
 
 ## What WizeFiles offers
 
-WizeFiles is designed for local, removable, network, and cloud storage. Depending on the build and Android device, beta testing may cover:
+WizeFiles combines everyday file management with advanced storage, transfer, package, viewing, and security tools. Availability can still depend on Android permissions, device capabilities, root/Shizuku access, and the limitations noted for each beta release.
 
-- Local storage, SD cards, USB drives, Android Storage Access Framework locations, root, and Shizuku
-- FTP/FTPS, SFTP, SMB, WebDAV, S3-compatible storage, and broad cloud-account support through rclone
-- Multiple tabs, adaptive dual-pane browsing, cross-pane drag-and-drop, mouse context menus, and desktop keyboard shortcuts
-- Conflict-aware copy, move, rename, delete, recoverable Trash Bin, secure local shred, advanced batch rename, indexed search, and a persistent Transfer Center
-- Folder synchronization, scheduled backup, PC/browser access, local HTTP/FTP sharing, and QR-authenticated Nearby Transfer
-- Archive creation, extraction, and transactional ZIP/7z/TAR.XZ mutation plus read-only browsing of extensive archives, filesystems, and disk images
-- Built-in image/video previews, service-backed audio, read-only PDF and e-book readers, saved-web-document viewing, a TTF/OTF/TTC Font Viewer, advanced image decoding, and LibVLC fallback for specialist media
-- Installed App Manager with single/split APK backup, package inspection, sharing, opening, and Android-confirmed uninstall
-- APK v1/v2/v3/v4 signing and verification, AAB upload-key signing, APKS/XAPK/APKM package-container workflows, and verified APK/APKS/APKM/XAPK installation with XAPK OBB handling
-- Duplicate detection, review-first storage cleanup, visual disk analysis, standalone file encryption, encrypted vaults, biometric protection, checksums, and certificate details
-- Adaptive file/folder icon shapes, Material themes, foldable/tablet layouts, and Android TV support
+### Browsing and organization
 
-Features under active development may not be present or complete in every beta release. The release notes and [Known Issues](KNOWN_ISSUES.md) are authoritative for each build.
+- Browse local storage, SD cards, USB drives, Storage Access Framework locations, root filesystems, and Shizuku-assisted paths.
+- Use multiple tabs and adaptive dual-pane browsing with independent navigation, search, selection, and cross-pane drag-and-drop.
+- Work efficiently with mouse context menus, desktop-style keyboard shortcuts, bookmarks, standard folders, launcher shortcuts, configurable sorting, filtering, and view modes.
+- Use indexed search, advanced batch rename, customizable filename display, and adaptive list/grid layouts.
+- Choose from multiple file and folder icon shapes with theme-aware container colors and shaped media/APK artwork.
 
-## Beta access and WizeFiles Pro
+### File operations and Transfer Center
 
-Official Beta builds provide a time-limited **WizeFiles Pro** entitlement so testers can exercise advanced workflows without making a purchase. Beta and debug builds do not launch real Google Play checkout.
+- Copy, move, rename, delete, restore, archive, extract, and perform provider-aware batch operations.
+- Resolve conflicts with replace, skip, keep-both, and review-first decisions.
+- Monitor durable background work through the persistent Transfer Center with queue controls, progress, pause, resume, retry, cancellation, recovery, timestamps, history, and diagnostics.
+- Use the recoverable **Trash Bin** for ordinary deletion or the separate **Secure shred** action for eligible writable local files and folders.
+- Preserve staged remote/cloud results in the browser while background uploads finish, with clear pending and failure states.
 
-The future production Free tier keeps core local and SAF file management, tabs, viewers, archive browsing and extraction, signature verification, Transfer Center history and recovery, one saved remote connection, one vault, and single-app App Manager actions. Pro covers advanced creation and execution such as dual-pane workflows, sync and schedules, package signing, archive mutation, batch App Manager operations, additional remote connections and vaults, rclone power-user setup, root access, and built-in local servers.
+### Network, cloud, sync, and sharing
 
-Pro expiration never makes existing files, vault data, saved connections, or operation history inaccessible. Purchase activation in production will require a backend-verified, signed entitlement; a local purchase state alone cannot grant Pro.
+- Connect directly to FTP/FTPS, SFTP, SMB, WebDAV, S3-compatible storage, and broad cloud-account support through embedded rclone.
+- Use the network and cloud integrations as built-in capabilities—no separate plugin or add-on is required.
+- Access the phone from a computer browser, run local HTTP/FTP sharing, and transfer directly between nearby devices with QR-authenticated pairing.
+- Create folder-sync and backup profiles with update, mirror, two-way, and move modes.
+- Schedule manual, interval, daily, or weekly jobs with Wi-Fi, charging, exclusions, safety limits, conflict handling, and version-retention controls.
+
+### Archives, filesystems, and disk images
+
+- Create and extract common archives, including password-protected workflows.
+- Add, remove, and rename entries through transactional ZIP, 7z, and TAR.XZ archive mutation.
+- Browse many archive, filesystem, disk-image, and split-volume formats read-only, including RAR/RAR5, CAB, ISO/UDF, WIM, XAR, DMG, APFS, EXT, FAT, HFS/HFS+, NTFS, SquashFS, QCOW2, VDI, VHD/VHDX, VMDK, MBR/GPT, and related sets.
+- Apply bounded extraction, staging, traversal protection, expansion limits, cancellation, and cleanup.
+
+### Built-in viewers and editing
+
+- Preview images with large-image tiling, EXIF orientation, GIF/SVG/WebP support, rotation, zoom, and sibling swiping.
+- Play video with Media3 and a guarded LibVLC fallback for uncommon formats and codecs.
+- Play folder audio through a background MediaSession with notification, lock-screen, headset, Bluetooth, metadata, artwork, seek, and queue controls.
+- Read PDFs with progressive rendering, zoom, search, selection, password prompts, safe links, fullscreen, and adaptive tablet pages.
+- Read EPUB/MOBI-family e-books and bounded saved-web documents such as HTML/XHTML, MHTML, CHM, and MAFF.
+- Preview TTF, OTF, variable fonts, and TTC collections with metadata, editable specimen text, multilingual samples, and adjustable text size.
+- Edit text files, inspect file properties and permissions, calculate checksums, view certificates, and hand files to Android's **Open with** or **Edit with** flows.
+- Decode specialist image families such as ICO/CUR, TIFF/BTF, TGA, and supported camera RAW sources.
+
+### Android app and package tools
+
+- Manage installed applications with search, filters, package details, opening, enable/disable actions, sharing, Android-confirmed uninstall, and safe system-app restrictions.
+- Back up single-APK apps as APK and split applications as checksum-described APKS packages without including private application data.
+- Inspect, sign, verify, and work with APK, AAB, APKS, APKM, and XAPK containers, including APK v1/v2/v3/v4 signatures and AAB upload-key workflows.
+- Install verified APK, APKS, APKM, and XAPK packages with compatible split selection and pre-install comparison of versions, signers, permissions, features, and components.
+- Validate and place XAPK OBB expansion files with rollback, retry, root fallback where required, and honest partial-completion reporting.
+- Gate forced downgrade and differently signed replacement behind explicit warnings and compatible privileged/Core Patch environments.
+
+### Storage intelligence and security
+
+- Find duplicate files and media, large files, APKs, unused applications, and other review-first cleanup categories.
+- Choose which duplicate to keep, ignore findings, exclude system apps where appropriate, and start with destructive cleanup selections disabled.
+- Analyze storage through category summaries and a visual disk-map treemap.
+- Protect files with standalone encryption, encrypted vaults, app password/biometric controls, relock policies, and secure settings backup/restore.
+- Inspect checksums, APK signatures, signing certificates, permissions, media metadata, and technical file details.
+- Generate local crash diagnostics only under user control; nothing is uploaded automatically.
+
+### Interface and device support
+
+- Use Material-styled light, dark, black, dynamic-color, translucent, and immersive appearances.
+- Work across phones, tablets, foldables, landscape layouts, Android desktop-style input, and Android TV.
+- Configure locale, appearance, behavior, security, default folders, storage connections, archive encoding, root strategy, and backup/restore preferences.
+- Keep focused viewers and file workflows without turning WizeFiles into a gallery, full music library, or media editor.
+
+Features under active development may not be present or complete in every beta release. Release notes and [Known Issues](KNOWN_ISSUES.md) are authoritative for the exact downloadable build.
+
+## Open features and GPL-3.0
+
+Every implemented WizeFiles feature is available in every build. There are no in-app purchases,
+subscriptions, advertisements, paid entitlements, feature tiers, or artificial limits on remote
+connections, vaults, batch operations, sync, package signing, root tools, or built-in servers.
+
+Beta expiration is a testing-safety mechanism only; it is not a license or feature restriction.
+Install a current beta to continue testing. WizeFiles is licensed under **GPL-3.0-only**, while
+third-party components remain under their respective compatible licenses. The public source tree is
+being prepared and will be added to this repository after the remaining changes are completed.
 
 <h2 align="center">How WizeFiles compares</h2>
 
@@ -575,10 +636,10 @@ Security vulnerabilities must not be reported through public issues. Follow [SEC
 - [Support](SUPPORT.md)
 - [Privacy information](PRIVACY.md)
 - [Security policy](SECURITY.md)
-- [Proprietary distribution terms](LICENSE.md)
+- [GNU GPL-3.0 license](LICENSE.md)
 
 ## Repository scope
 
-This repository contains beta documentation, feedback templates, and release binaries only. It does not accept source-code pull requests and does not grant permission to copy, modify, redistribute, or create derivative works from WizeFiles except where applicable law requires otherwise.
+This repository currently contains beta documentation, feedback templates, release history, and downloadable binaries. The WizeFiles source tree will be added here after the remaining preparation changes are complete. Once published, this repository will also be the public location for source review, modification, redistribution, and contributions under GPL-3.0-only.
 
-Copyright © WizeFiles. All rights reserved.
+Copyright © 2026 Wissam Chehade. Licensed under GPL-3.0-only.
